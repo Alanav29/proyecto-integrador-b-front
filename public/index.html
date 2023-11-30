@@ -1,116 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Inicio</title>
-		<link rel="stylesheet" href="./assets/styles/generalStyle.css" />
+		<meta charset="utf-8" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<meta
+			name="description"
+			content="Web site created using create-react-app"
+		/>
+		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+		<!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+		<title>React App</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
 			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 			crossorigin="anonymous"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
-			rel="stylesheet"
-		/>
-
-		<link rel="stylesheet" href="./assets/styles/cardTeamStyle.css" />
-		<link rel="stylesheet" href="./assets/styles/navbarStyle.css" />
-		<link rel="stylesheet" href="./assets/styles/navbarMobile.css" />
 	</head>
-
-	<body class="pb-5 pb-md-0">
-		<header id="navbar-container">
-			<nav class="navbar navbar-expand d-none d-md-block py-1" id="navbar">
-				<div class="container-fluid">
-					<a class="navbar-brand ms-3" href="./index.html">
-						<img
-							id="logo-navbar"
-							src="./assets/img/firmaFerro.svg"
-							alt="Logo: firma artista Alfonso Ferro"
-						/>
-					</a>
-					<div class="" id="navbarNav">
-						<ul class="navbar-nav fs-6">
-							<li class="nav-item mx-2">
-								<a class="nav-link" aria-current="page" href="./index.html"
-									>INICIO</a
-								>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link" href="#">GALERÍA</a>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link" href="./pages/about-us.html">NOSOTROS</a>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link" href="#">CONTACTO</a>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link" href="#">CUENTA</a>
-							</li>
-							<li class="nav-item mx-2">
-								<a class="nav-link" href="#">CARRITO</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<nav class="d-block d-md-none" id="navbar-mobile">
-				<div class="container-fluid d-flex p-2 justify-content-center">
-					<a class="px-2 d-flex flex-column align-items-center">
-						<i class="bi bi-house"></i>
-						<p href="./index.html">Inicio</p>
-					</a>
-					<a class="px-2 d-flex flex-column align-items-center">
-						<i class="bi bi-patch-question"></i>
-						<p href="">Nosotros</p>
-					</a>
-					<a class="px-2 d-flex flex-column align-items-center">
-						<i class="bi bi-columns-gap"></i>
-						<p href="">Galería</p>
-					</a>
-					<a class="px-2 d-flex flex-column align-items-center">
-						<i class="bi bi-person-circle"></i>
-						<p href="">Cuenta</p>
-					</a>
-					<a class="px-2 d-flex flex-column align-items-center">
-						<i class="bi bi-envelope"></i>
-						<p href="">Contacto</p>
-					</a>
-					<a class="px-2 d-flex flex-column align-items-center">
-						<i class="bi bi-cart4"></i>
-						<p href="">Carrito</p>
-					</a>
-				</div>
-			</nav>
-			<div class="d-flex d-md-none justify-content-start pt-3 pb-5">
-				<a class="navbar-brand ms-3" href="./index.html">
-					<img
-						id="logo-header-mobile"
-						src="../src/assets/img/firmaFerro.svg"
-						alt="Logo: firma artista Alfonso Ferro"
-					/>
-				</a>
-			</div>
-		</header>
-		<main></main>
+	<body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
-	</body>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-		crossorigin="anonymous"
-	></script>
-	<script src="./assets/scripts/script.js"></script>
-	<!-- <script src="./assets/scripts/aboutUs.js"></script> -->
-</html>
+		<!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
