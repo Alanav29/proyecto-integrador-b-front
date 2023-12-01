@@ -6,7 +6,7 @@ const NavBar = () => {
 		<>
 			<nav className="navbar navbar-expand d-none d-md-block py-1" id="navbar">
 				<div className="container-fluid">
-					<Link className="navbar-brand ms-3" href="./index.html">
+					<Link className="navbar-brand ms-3" to="/">
 						<p>FERRO</p>
 					</Link>
 					<div className id="navbarNav">
