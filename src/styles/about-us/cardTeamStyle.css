@@ -1,0 +1,83 @@
+.card-team {
+	display: grid;
+	margin: 1rem;
+	width: 18rem;
+}
+
+.card-team-body a {
+	color: black !important;
+}
+
+.card-team-body h2 {
+	font-weight: 400;
+	margin: 2rem 0 0.25rem 0;
+}
+
+.card-team-body h1 {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	opacity: 0.5;
+	margin: 0;
+}
+
+.card-team-body {
+	--hover: 0;
+}
+
+.card-team-body:hover {
+	--hover: 1;
+}
+
+.card-team-role {
+	color: rgb(0, 155, 0) !important;
+}
+
+.card-team-description {
+	font-weight: 300;
+	font-size: 0.9rem;
+	text-align: justify;
+}
+
+.card-team-figure {
+	width: 18rem;
+	aspect-ratio: 7 / 6;
+	--bg: hsl(50 100% calc(90% - (var(--hover) * 10%)));
+	--accent: hsl(170, 100%, 43%);
+	transition: background 0.2s;
+	background: radial-gradient(
+			circle at top left,
+			var(--accent),
+			transparent 75%
+		),
+		var(--bg);
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+
+.card-team-figure:after {
+	content: "";
+	position: absolute;
+	width: 20%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	bottom: 0%;
+	left: 20%;
+	background: linear-gradient(-65deg, var(--bg) 50%, var(--accent) 50%);
+	filter: blur(25px);
+	transform: translateX(calc(var(--hover) * 15%))
+		scale(calc(1 + (var(--hover) * 0.2)));
+	transition: transform 0.2s, background 0.2s;
+}
+
+.card-team-figure img {
+	position: absolute;
+	left: 12%;
+	bottom: 0%;
+	height: 85%;
+	transform: translateX(calc(var(--hover) * -15%))
+		scale(calc(1 + (var(--hover) * 0.2)));
+	transition: transform 0.2s;
+}

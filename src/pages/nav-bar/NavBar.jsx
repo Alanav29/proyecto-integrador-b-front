@@ -1,5 +1,5 @@
 import MenuOption from "../../components/navbar/MenuOption";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const NavBar = () => {
 	return (
@@ -9,7 +9,7 @@ const NavBar = () => {
 					<Link className="navbar-brand ms-3" to="/">
 						<p>FERRO</p>
 					</Link>
-					<div className id="navbarNav">
+					<div className="navbarNav">
 						<ul className="navbar-nav fs-6">
 							<MenuOption pageToConnect={"/"}>INICIO</MenuOption>
 							<MenuOption pageToConnect={"/gallery"}>GALERIA</MenuOption>
@@ -20,6 +20,7 @@ const NavBar = () => {
 						</ul>
 					</div>
 				</div>
+				<Outlet />
 			</nav>
 		</>
 	);

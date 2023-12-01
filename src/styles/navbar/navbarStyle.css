@@ -1,0 +1,11 @@
+#logo-navbar {
+	height: 35px;
+}
+
+#navbar a:focus {
+	color: blueviolet;
+}
+
+#navbar {
+	background-color: rgb(246, 246, 246);
+}
