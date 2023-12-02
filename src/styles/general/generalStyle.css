@@ -1,0 +1,10 @@
+* {
+	box-sizing: border-box !important;
+}
+
+body {
+	font-family: "DM Sans", sans-serif !important;
+}
+.justify {
+	text-align: justify;
+}

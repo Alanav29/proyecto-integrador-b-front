@@ -1,5 +1,6 @@
 import MenuOption from "../../components/navbar/MenuOption";
 import { Link, Outlet } from "react-router-dom";
+import "../../styles/navbar/navbarStyle.css";
 
 const NavBar = () => {
 	return (
