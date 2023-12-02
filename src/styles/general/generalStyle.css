@@ -1,5 +1,7 @@
-* {
-	box-sizing: border-box !important;
+:root{
+	--accent-color: rgb(62, 165, 42);
+	--input-background-color: white;
+	--input-outline-color: black;
 }
 
 body {
