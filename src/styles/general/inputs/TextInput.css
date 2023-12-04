@@ -1,0 +1,30 @@
+.text-input {
+    width: auto;
+    position: static;
+  }
+  
+  .text-input label {
+    color: var(--input-outline-color);
+    position: relative;
+    top: 0.5rem;
+    background: var(--input-background-color);
+    width: fit-content;
+    transition: transform 0.2s;
+  }
+
+  .text-input input:focus + label{
+    color: var(--accent-color);
+    transform: scale(1.2);
+    transform: translateX(0.5rem);
+  }
+
+  
+  .text-input input {
+    border: 2px var(--input-outline-color) solid;
+    background: var(--input-background-color);
+  }
+  
+  .text-input input:focus {
+    border: 2px var(--accent-color) solid;
+    outline: none;
+  }

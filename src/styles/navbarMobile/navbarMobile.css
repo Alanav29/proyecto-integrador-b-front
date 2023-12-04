@@ -1,0 +1,25 @@
+#navbar-mobile {
+	box-shadow: inset 0px 3px 4px 0px rgba(0, 0, 0, 0.11),
+		0px 7px 10px -7px rgba(0, 0, 0, 0.1);
+	width: 90vw;
+	background-color: white;
+	position: fixed;
+	top: 88vh;
+	left: 5vw;
+	z-index: 3;
+	border-radius: 999px;
+}
+
+#navbar-mobile a {
+	text-decoration: none;
+	color: black;
+}
+
+#navbar-mobile p {
+	font-size: 3vw;
+	margin: 0% !important;
+}
+
+#logo-header-mobile {
+	height: 2rem;
+}
