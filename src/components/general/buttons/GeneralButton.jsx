@@ -1,5 +1,7 @@
-const GeneralButton = ({ buttonText }) => {
-  return <button className="btn btn-success my-4">{buttonText}</button>;
+const GeneralButton = ({ buttonText, buttonColorClass }) => {
+  return (
+    <button className={`btn ${buttonColorClass} my-4`}>{buttonText}</button>
+  );
 };
 
 export default GeneralButton;

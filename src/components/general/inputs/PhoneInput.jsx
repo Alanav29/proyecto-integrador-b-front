@@ -1,6 +1,6 @@
 import "../../../styles/general/inputs/TextInput.css";
 
-const TextInput = ({
+const PhoneInput = ({
   placeholderText,
   labelText,
   id,
@@ -16,6 +16,10 @@ const TextInput = ({
         id={id}
         className="p-2"
         required={isRequired}
+        maxLength={"11"}
+        onChange={(e) => {
+          e.target.value = e.target.value.replace(/[^0-9]/g, "");
+        }}
       />
       <label htmlFor={id} className="mx-2 px-1">
         {labelText}
@@ -24,4 +28,4 @@ const TextInput = ({
   );
 };
 
-export default TextInput;
+export default PhoneInput;

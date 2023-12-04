@@ -1,14 +1,14 @@
 import ContactForm from "../../components/contact/ContactForm";
-import contactImg from "../../assets/img/general/htamalerosLogoSinFondo.png";
+import "../../styles/contact/contact.css";
 
 const Contact = () => {
   return (
-    <main className="container">
-      <section className="row justify-content-center">
+    <main
+      className="d-flex align-items-center justify-content-center"
+      id="contact-page"
+    >
+      <section id="contact-form-container" className="p-4 bg-white mx-3">
         <ContactForm />
-        <div className="col-6">
-          <img className="img-fluid" src={contactImg} alt="" />
-        </div>
       </section>
     </main>
   );

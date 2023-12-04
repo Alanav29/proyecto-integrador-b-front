@@ -1,5 +1,5 @@
 :root{
-	--accent-color: rgb(62, 165, 42);
+	--accent-color: rgb(47, 121, 32);
 	--input-background-color: white;
 	--input-outline-color: black;
 }
@@ -9,4 +9,8 @@ body {
 }
 .justify {
 	text-align: justify;
+}
+
+.accent-color {
+ color: var(--accent-color)!important;
 }

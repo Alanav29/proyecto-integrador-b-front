@@ -1,15 +1,15 @@
-import "../../../styles/general/inputs/TextInput.css";
+import "../../../styles/general/inputs/TextAreaInput.css";
 
-const TextInput = ({
-  placeholderText,
-  labelText,
+const TextAreaInput = ({
   id,
+  placeholderText,
   isRequired,
+  labelText,
   nameText,
 }) => {
   return (
-    <div className="text-input d-flex flex-column-reverse">
-      <input
+    <div className="text-area-input d-flex flex-column-reverse">
+      <textarea
         type="text"
         placeholder={placeholderText}
         name={nameText}
@@ -24,4 +24,4 @@ const TextInput = ({
   );
 };
 
-export default TextInput;
+export default TextAreaInput;

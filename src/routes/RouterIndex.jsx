@@ -3,6 +3,7 @@ import Home from "../pages/home/Home";
 import AboutUs from "../pages/about-us/AboutUs";
 import NavBar from "../pages/nav-bar/NavBar";
 import Contact from "../pages/contact/Contact";
+import NavbarMobile from "../components/navbar-mobile/NavbarMobile";
 
 const RouterIndex = () => {
   return (
@@ -13,6 +14,7 @@ const RouterIndex = () => {
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <NavbarMobile />
     </>
   );
 };

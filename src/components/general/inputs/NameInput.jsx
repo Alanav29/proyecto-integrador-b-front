@@ -1,6 +1,6 @@
 import "../../../styles/general/inputs/TextInput.css";
 
-const TextInput = ({
+const NameInput = ({
   placeholderText,
   labelText,
   id,
@@ -16,6 +16,9 @@ const TextInput = ({
         id={id}
         className="p-2"
         required={isRequired}
+        onChange={(e) => {
+          e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+        }}
       />
       <label htmlFor={id} className="mx-2 px-1">
         {labelText}
@@ -24,4 +27,4 @@ const TextInput = ({
   );
 };
 
-export default TextInput;
+export default NameInput;

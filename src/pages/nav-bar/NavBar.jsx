@@ -8,7 +8,7 @@ const NavBar = () => {
       <nav className="navbar navbar-expand d-none d-md-block py-1" id="navbar">
         <div className="container-fluid">
           <Link className="navbar-brand ms-3" to="/">
-            <p>FERRO</p>
+            FERRO
           </Link>
           <div className="navbarNav">
             <ul className="navbar-nav fs-6">
