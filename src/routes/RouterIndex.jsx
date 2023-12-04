@@ -4,11 +4,13 @@ import AboutUs from "../pages/about-us/AboutUs";
 import NavBar from "../pages/nav-bar/NavBar";
 import Contact from "../pages/contact/Contact";
 import NavbarMobile from "../components/navbar-mobile/NavbarMobile";
+import PageLogoMobile from "../components/navbar-mobile/PageLogoMobile";
 
 const RouterIndex = () => {
   return (
     <>
       <NavBar />
+      <PageLogoMobile />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUs />} />
