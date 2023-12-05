@@ -9,6 +9,7 @@ import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const contactFormRef = useRef();
+
   const sendEmailForm = (event) => {
     event.preventDefault();
 
@@ -30,7 +31,11 @@ const ContactForm = () => {
   return (
     <>
       <h1 className="mb-3">Contáctenos</h1>
-      <form ref={contactFormRef} className="w-auto" onSubmit={sendEmailForm}>
+      <form
+        ref={contactFormRef}
+        className="w-auto pb-5 pb-md-0"
+        onSubmit={sendEmailForm}
+      >
         <NameInput
           placeholderText={"Alan"}
           isRequired={true}
@@ -45,13 +50,15 @@ const ContactForm = () => {
           id={"contact-form-email"}
           nameText={"emailjs_email"}
         />
+
         <PhoneInput
           placeholderText={"5578787878"}
           isRequired={true}
           labelText={"Teléfono"}
-          id={"contact-form-subject"}
+          id={"contact-form-phone"}
           nameText={"emailjs_phone"}
         />
+
         <TextInput
           placeholderText={"Asunto del mensaje"}
           isRequired={true}
