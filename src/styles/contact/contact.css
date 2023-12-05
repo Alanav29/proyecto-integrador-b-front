@@ -1,5 +1,5 @@
 #contact-page{
-    height: 100vh;
+    min-height: 93vh;
     background-image: url(../../assets/img/general/cuadro1Gaby.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,9 +9,8 @@
 
 #contact-form-container{
     width: 500px;
-    margin-top: auto;
+    height: fit-content;
     border: 3px solid black;
     border-bottom: 0px;
     border-radius: 1rem 1rem 0px 0px;
-    padding-bottom: 50px;
 }

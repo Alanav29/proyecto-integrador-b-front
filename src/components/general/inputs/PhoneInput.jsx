@@ -17,6 +17,7 @@ const PhoneInput = ({
         className="p-2"
         required={isRequired}
         maxLength={"11"}
+        minLength={"10"}
         onChange={(e) => {
           e.target.value = e.target.value.replace(/[^0-9]/g, "");
         }}
