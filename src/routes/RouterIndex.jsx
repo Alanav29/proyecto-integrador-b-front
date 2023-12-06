@@ -5,6 +5,7 @@ import NavBar from "../pages/nav-bar/NavBar";
 import Contact from "../pages/contact/Contact";
 import NavbarMobile from "../components/navbar-mobile/NavbarMobile";
 import PageLogoMobile from "../components/navbar-mobile/PageLogoMobile";
+import Gallery from "../pages/gallery/Gallery";
 
 const RouterIndex = () => {
   return (
@@ -15,6 +16,7 @@ const RouterIndex = () => {
         <Route path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
       <NavbarMobile />
     </>
