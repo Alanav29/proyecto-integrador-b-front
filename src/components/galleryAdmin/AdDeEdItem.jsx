@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 
 const AdDeEdItem = () => {
   const addItem = ({name, price, description, img}) => {
-    const 
   } 
   return (
     <div>AdDeEdItem</div>
