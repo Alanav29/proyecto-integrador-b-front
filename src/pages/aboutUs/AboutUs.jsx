@@ -1,7 +1,7 @@
-import "../../styles/about-us/cardTeamStyle.css";
-import "../../styles/about-us/aboutUs.css";
-import membersArray from "../../utils/about-us/members-info";
-import CardTeamMember from "../../components/about-us/CardTeamMember";
+import "../../styles/aboutUs/cardTeamStyle.css";
+import "../../styles/aboutUs/aboutUs.css";
+import membersArray from "../../utils/aboutUs/membersInfo";
+import CardTeamMember from "../../components/aboutUs/CardTeamMember";
 import cuadroNosotros from "../../assets/img/general/cuadro1Gaby.jpg";
 import teamLogoImg from "../../assets/img/general/htamalerosLogoSinFondo.png";
 
