@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
-import AboutUs from "../pages/about-us/AboutUs";
-import NavBar from "../pages/nav-bar/NavBar";
+import AboutUs from "../pages/aboutUs/AboutUs";
+import NavBar from "../pages/navbar/Navbar";
 import Contact from "../pages/contact/Contact";
-import NavbarMobile from "../components/navbar-mobile/NavbarMobile";
-import PageLogoMobile from "../components/navbar-mobile/PageLogoMobile";
+import NavbarMobile from "../components/navbarMobile/NavbarMobile";
+import PageLogoMobile from "../components/navbarMobile/PageLogoMobile";
 
 const RouterIndex = () => {
   return (

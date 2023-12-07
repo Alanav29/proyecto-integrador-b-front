@@ -33,7 +33,7 @@ const ContactForm = () => {
       <h1 className="mb-3">Contáctenos</h1>
       <form
         ref={contactFormRef}
-        className="w-auto pb-5 pb-md-0"
+        className="w-auto h-auto pb-5 pb-md-0"
         onSubmit={sendEmailForm}
       >
         <NameInput
