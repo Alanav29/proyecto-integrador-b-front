@@ -20,6 +20,10 @@
   color: red;
 }
 
+.edit-icon {
+  color: rgb(0, 0, 0);
+}
+
 .edit-icon:hover {
   color: rgb(0, 191, 255);
 }
