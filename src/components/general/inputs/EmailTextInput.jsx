@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import "../../../styles/general/inputs/TextInput.css";
+import validator from "validator";
 
 const EmailTextInput = ({
   placeholderText,
@@ -26,6 +27,7 @@ const EmailTextInput = ({
           e.target.value = e.target.value.replace(/^@/g, "");
           e.target.value = e.target.value.replace(/\.@\./g, "");
           e.target.value = e.target.value.replace(/^\./g, "");
+          e.target.value = e.target.value.replace(/@@/g, "@");
         }}
       />
       <label htmlFor={id} className="mx-2 px-1">

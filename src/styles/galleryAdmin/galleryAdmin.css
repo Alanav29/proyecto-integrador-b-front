@@ -1,0 +1,34 @@
+.admin-item-container {
+  width: fit-content;
+}
+
+.admin-item-section {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.product-img {
+  max-width: 100px;
+}
+
+.product-img img {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+.edit-icon {
+  color: rgb(0, 0, 0);
+}
+
+.edit-icon:hover {
+  color: rgb(0, 191, 255);
+}
+
+.bg-border-none {
+  border: none;
+  background-color: transparent;
+}
