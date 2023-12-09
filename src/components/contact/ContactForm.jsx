@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState } from "react";
 import GeneralButton from "../general/buttons/GeneralButton";
 import EmailTextInput from "../general/inputs/EmailTextInput";
 import NameInput from "../general/inputs/NameInput";
@@ -6,37 +6,47 @@ import PhoneInput from "../general/inputs/PhoneInput";
 import TextAreaInput from "../general/inputs/TextAreaInput";
 import TextInput from "../general/inputs/TextInput";
 import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
+import validator from "validator";
 
 const ContactForm = () => {
-  const contactFormRef = useRef();
+  const { handleSubmit, register } = useForm();
 
-  const sendEmailForm = (event) => {
-    event.preventDefault();
-
+  const sendEmail = (data) => {
     const serviceID = "default_service";
     const templateID = "template_ubhucbb";
     const publicKey = "EA6hf2_2S4stwWgRP";
 
     emailjs
-      .sendForm(serviceID, templateID, contactFormRef.current, publicKey)
-      .then(
-        () => {
-          console.log("Se envió email");
-        },
-        (err) => {
-          console.log(err);
-        }
-      );
+      .send(serviceID, templateID, data, publicKey)
+      .then((response) => {
+        console.log("Email enviado!", response.status, response.text);
+      })
+      .catch((error) => {
+        console.error("Error al enviar el email:", error);
+      });
   };
+
+  const onSubmit = (data) => {
+    if (
+      validator.isEmail(data.emailjs_email) &&
+      data.emailjs_phone.length > 9
+    ) {
+      sendEmail(data);
+    } else {
+      console.log("faltan datos");
+    }
+  };
+
   return (
     <>
       <h1 className="mb-3">Contáctenos</h1>
       <form
-        ref={contactFormRef}
         className="w-auto h-auto pb-5 pb-md-0"
-        onSubmit={sendEmailForm}
+        onSubmit={handleSubmit(onSubmit)}
       >
         <NameInput
+          register={register}
           placeholderText={"Alan"}
           isRequired={true}
           labelText={"Nombre"}
@@ -44,6 +54,7 @@ const ContactForm = () => {
           nameText={"emailjs_name"}
         />
         <EmailTextInput
+          register={register}
           placeholderText={"alan@mail.com"}
           isRequired={true}
           labelText={"Email"}
@@ -52,6 +63,7 @@ const ContactForm = () => {
         />
 
         <PhoneInput
+          register={register}
           placeholderText={"5578787878"}
           isRequired={true}
           labelText={"Teléfono"}
@@ -60,6 +72,7 @@ const ContactForm = () => {
         />
 
         <TextInput
+          register={register}
           placeholderText={"Asunto del mensaje"}
           isRequired={true}
           labelText={"Asunto"}
@@ -67,6 +80,7 @@ const ContactForm = () => {
           nameText={"emailjs_issue"}
         />
         <TextAreaInput
+          register={register}
           placeholderText={"Escribe aquí tu mensaje"}
           isRequired={true}
           labelText={"Mensaje"}

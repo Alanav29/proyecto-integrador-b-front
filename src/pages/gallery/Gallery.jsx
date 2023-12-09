@@ -2,8 +2,8 @@ import addProduct from "../../utils/gallery/addProduct";
 import productArray from "../../utils/gallery/prueba";
 import { useState } from "react";
 import Product from "../../utils/gallery/productClass";
-import ProductListItem from "../../components/galleryAdmin/ProductListItem";
 import cuadroImg from "../../assets/img/general/cuadro1Gaby.jpg";
+import ProductListItem from "../../components/galleryAdmin/ProductListItem";
 
 const Gallery = () => {
   const [product, setProduct] = useState(
@@ -24,13 +24,6 @@ const Gallery = () => {
         price={product.price}
         quantity={1}
       />
-      <ProductListItem
-        title={product.title}
-        img={cuadroImg}
-        price={product.price}
-        quantity={1}
-      />
-
       <button
         onClick={() => {
           addProduct(product, productArray);
