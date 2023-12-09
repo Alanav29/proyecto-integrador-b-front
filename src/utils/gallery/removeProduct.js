@@ -1,11 +1,15 @@
-import React from 'react'
-
-const removeProduct = (product, productArray) => {
-    if (product >= 0 && index < productArray.length) {
-        productArray.splice(product, 1);
-      } else {
-        console.log('Producto fuera de rango');
-      }
+// Función para la petición DELETE
+async function deleteProduct(id) {
+  try {
+    const response = await fetch(`http://localhost:4000/api/products/${id}`, {
+      method: 'DELETE',
+    });
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
-export default removeProduct
+
+export default deleteProduct
