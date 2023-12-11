@@ -1,35 +1,21 @@
 import { useState } from "react";
-// import Product from "../../utils/gallery/productClass";
-import cuadroImg from "../../assets/img/general/cuadro1Gaby.jpg";
-import ProductListItem from "../../components/galleryAdmin/ProductListItem";
+import Product from "../../utils/gallery/productClass";
+import GalleryProduct from "../../components/gallery/GalleryProduct";
+import productImg from "../../assets/img/general/cuadro1Gaby.jpg"
 
 const Gallery = () => {
-  // const [product, setProduct] = useState(
-  //   new Product({
-  //     title: "Destellos del desierto",
-  //     width: 150,
-  //     height: 170,
-  //     color: "yellow",
-  //     price: "$25,000",
-  //     technique: "acrylic on canvas",
-  //   })
-  // );
+  const [product, setProduct] = useState({
+    title: "Destellos del desierto",
+    width: 150,
+    height: 170,
+    color: "yellow",
+    price: "$25,000",
+    technique: "acrylic on canvas",
+    img: productImg,
+  })
+    
   return (
-    <>
-      {/* <ProductListItem
-        title={product.title}
-        img={cuadroImg}
-        price={product.price}
-        quantity={1}
-      /> */}
-      <button
-        onClick={() => {
-          console.log("boton");
-        }}
-      >
-        Gallery
-      </button>
-    </>
+    <GalleryProduct product={product} />
   );
 };
 
