@@ -1,4 +1,5 @@
 import "../../../styles/general/inputs/TextAreaInput.css";
+import { useState } from "react";
 
 const TextAreaInput = ({
   id,
@@ -6,16 +7,32 @@ const TextAreaInput = ({
   isRequired,
   labelText,
   nameText,
+  register,
 }) => {
+  const [fillState, setFillState] = useState(true);
+  const [alertMessage, setAlertMessage] = useState("");
+
+  const showAlerMessage = (e) => {
+    if (e.target.value !== "") {
+      setFillState(true);
+    } else {
+      setFillState(false);
+      setAlertMessage("Llena este campo");
+    }
+  };
+
   return (
     <div className="text-area-input d-flex flex-column-reverse">
+      <p className={fillState ? "d-none" : "text-danger m-0"}>{alertMessage}</p>
       <textarea
+        {...register(nameText)}
         type="text"
         placeholder={placeholderText}
         name={nameText}
         id={id}
         className="p-2"
         required={isRequired}
+        onChange={(e) => showAlerMessage(e)}
       />
       <label htmlFor={id} className="mx-2 px-1">
         {labelText}
