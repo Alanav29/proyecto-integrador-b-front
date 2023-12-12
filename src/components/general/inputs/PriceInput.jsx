@@ -8,7 +8,7 @@ const PriceInput = ({
     isRequired,
     nameText,
     register,
-    price,
+   
   }) => {
     const [fillState, setFillState] = useState(true);
     const [alertMessage, setAlertMessage] = useState("");
@@ -34,7 +34,7 @@ const PriceInput = ({
           id={id}
           className="p-2"
           required={isRequired}
-          {/* pattern="^[0-9]+$" */}
+          
           onChange={(e) => {
             // Only allow numbers
             e.target.value = e.target.value.replace(/[^0-9]/g, "");
