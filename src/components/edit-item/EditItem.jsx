@@ -43,33 +43,32 @@ const EditForm = () => {
           nameText={"admin-gallery-form-width"}
         />
          
-          <TextInput
-            register={register}
-            placeholderText={"amarillo"}
-            isRequired={true}
-            labelText={"Color"}
-            id={"Color"}
-            nameText={"js_color"}
-          />
-  
-          <PriceInput
-            register={register}
-            placeholderText={"25000"}
-            isRequired={true}
-            labelText={"Precio"}
-            id={"precio"}
-            nameText={"precio"}
-          />
-  
-          <TextInput
-            register={register}
-            placeholderText={"oleo"}
-            isRequired={true}
-            labelText={"Tecnica"}
-            id={"tecnica"}
-            nameText={"tecnica"}
-       
-          />
+         <TextInput
+          register={register}
+          placeholderText={"Amarillo"}
+          isRequired={true}
+          labelText={"Color"}
+          id={"admin-gallery-form-color"}
+          nameText={"color"}
+        />
+
+        <PriceInput
+          register={register}
+          placeholderText={"25000"}
+          isRequired={true}
+          labelText={"Precio"}
+          id={"admin-gallery-form-price"}
+          nameText={"price"}
+        />
+
+        <TextInput
+          register={register}
+          placeholderText={"Óleo"}
+          isRequired={true}
+          labelText={"Técnica"}
+          id={"admin-gallery-form-technique"}
+          nameText={"technique"}
+        />
           <GeneralButton
             buttonText={"Guardar Cambios"}
             buttonColorClass={"bg-black text-white"}
