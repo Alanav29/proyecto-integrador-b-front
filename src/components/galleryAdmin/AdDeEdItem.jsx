@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const AdDeEdItem = () => {
-  const addItem = ({name, price, description, img}) => {
+  const addItem = ({title, width, height, color, price, technique }) => {
   } 
   return (
     <div>AdDeEdItem</div>
@@ -9,3 +9,4 @@ const AdDeEdItem = () => {
 }
 
 export default AdDeEdItem
+ 
