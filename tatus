@@ -1,0 +1,249 @@
+[33mcommit ec280775415670f2d04c87af401b93b599e8619f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: arleneom <arleneomtz@gmail.com>
+Date:   Mon Dec 11 22:05:05 2023 -0600
+
+    add-product finished
+
+[33mcommit 8cbcac1f3919d35257d1bcf0c496028d28af5676[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 01f7ab5 7f5da57
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Mon Dec 11 21:16:19 2023 -0600
+
+    Merge pull request #11 from sebastianmov/edit-item
+    
+    edit-item
+
+[33mcommit 7f5da57e99ae684be20cf2f7feea31355527759b[m[33m ([m[1;31morigin/edit-item[m[33m, [m[1;32medit-item[m[33m)[m
+Author: arleneom <arleneomtz@gmail.com>
+Date:   Mon Dec 11 21:12:04 2023 -0600
+
+    edit-item
+
+[33mcommit 01f7ab57b1846d66e6840c81dc9c322ed0dff408[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Mon Dec 11 20:56:35 2023 -0600
+
+    src: addProduct page added
+
+[33mcommit f3dea9edb34197571b4fbdbb935ce721a86c71b6[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Sun Dec 10 23:39:11 2023 -0600
+
+    feature: gallery combine gallery product
+
+[33mcommit bc309231785ee0150931fd54ba2a924fc4d71c20[m
+Merge: 1180e0a 3160707
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Sun Dec 10 23:27:02 2023 -0600
+
+    Merge pull request #10 from sebastianmov/gallery-product
+    
+    Gallery product
+
+[33mcommit 31607075b29a6b6de618dd51896cf0460b8052b3[m
+Merge: aa20ff6 1180e0a
+Author: Sebastian Montes de Oca <ing.montesdeoca94@gmail.com>
+Date:   Sun Dec 10 23:24:27 2023 -0600
+
+    Merge branch 'main' of github.com:sebastianmov/Proyecto-Integrador-React into gallery-product
+
+[33mcommit 1180e0a337c2a6f9e2bb4a43ea097e7fabeef088[m
+Merge: 0e12add f130a28
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Sun Dec 10 23:20:24 2023 -0600
+
+    Merge pull request #9 from sebastianmov/gallery2
+    
+    Created gallery page and galleryStyle css
+
+[33mcommit f130a28739da5fb95908a70ad578ebad31c7ab37[m
+Author: gabriela.ferro <gabriela.ferro2018@hotmail.com>
+Date:   Sun Dec 10 23:02:54 2023 -0600
+
+    Created gallery page and galleryStyle css
+
+[33mcommit aa20ff66c0e915a932f45377770c70a720fa86f2[m
+Author: Sebastian Montes de Oca <ing.montesdeoca94@gmail.com>
+Date:   Sun Dec 10 23:01:43 2023 -0600
+
+    branch gallery-product added
+
+[33mcommit 0e12add50ab6de717f15e202d866379888075716[m
+Merge: c96ca21 ee1bbbf
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Sun Dec 10 20:02:29 2023 -0600
+
+    Merge pull request #8 from sebastianmov/add-item
+    
+    Differences with main resolved
+
+[33mcommit ee1bbbf86e19c11ca3ad6e54c4e17261a4a79520[m
+Merge: 2cb136f 977168b
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Sun Dec 10 19:20:32 2023 -0600
+
+    Merge pull request #7 from sebastianmov/adminPage
+    
+    Product class restored
+
+[33mcommit 977168b7aeb164a5ce10ec5d64fe746a161ec0be[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Sun Dec 10 19:11:29 2023 -0600
+
+    feutures: productClass Restored and Gallery component repaired
+
+[33mcommit 8400c8175617925b6fbe74f3996503e61d9053ce[m
+Merge: c96ca21 2cb136f
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Sun Dec 10 18:55:20 2023 -0600
+
+    Merge branch 'add-item' of github.com:sebastianmov/Proyecto-Integrador-React into adminPage
+
+[33mcommit c96ca218955bded48fd5447e9590fcc935048590[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Sat Dec 9 01:04:17 2023 -0600
+
+    feature: contact form validation updated
+
+[33mcommit 2cb136f8cb7a3ba1a444d9dfc517489acedfcaa0[m
+Merge: 8e73afb 89ab5c8
+Author: Carlos Carranza <Carranza591@gmail.com>
+Date:   Fri Dec 8 20:58:35 2023 -0600
+
+    Merge branch 'add-item' of github.com:sebastianmov/Proyecto-Integrador-React into add-item
+
+[33mcommit 8e73afba6f695be79093030890cc09b6efae406c[m
+Author: Carlos Carranza <Carranza591@gmail.com>
+Date:   Fri Dec 8 20:49:08 2023 -0600
+
+    Function's Product OK
+
+[33mcommit 21a435f47d88fa1a718b6b8bfb780365d8c0de3a[m
+Merge: 8cb021a 89ab5c8
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Fri Dec 8 17:03:15 2023 -0600
+
+    Merge pull request #6 from sebastianmov/add-item
+    
+    Add item
+
+[33mcommit 89ab5c8046cde2d6f33360bea5f3d62848d79991[m
+Merge: 0985e8e a075131
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Fri Dec 8 16:38:09 2023 -0600
+
+    Merge branch 'add-item' of github.com:sebastianmov/Proyecto-Integrador-React into add-item
+
+[33mcommit 0985e8e81eacfc85c96afe302301e5f55a13339f[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Fri Dec 8 16:37:55 2023 -0600
+
+    fetaure Product List Item Created
+
+[33mcommit a075131fca8c642a25bf0f93a12019c14c266244[m
+Merge: 98617ef 93f1e24
+Author: Sebastian Montes de Oca <ing.montesdeoca94@gmail.com>
+Date:   Fri Dec 8 16:05:41 2023 -0600
+
+    Merge branch 'add-item' of github.com:sebastianmov/Proyecto-Integrador-React into add-item
+
+[33mcommit 98617ef07631514a3a43eccc3052fc27902a8c4e[m
+Author: Sebastian Montes de Oca <ing.montesdeoca94@gmail.com>
+Date:   Fri Dec 8 16:03:55 2023 -0600
+
+    add-item function
+
+[33mcommit 93f1e242863767463ac415abac65c52b57d1308d[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Thu Dec 7 00:03:11 2023 -0600
+
+    feature: ProductListItem component start
+
+[33mcommit 8cb021a66c2ccab40c5f05e3c829723296d78028[m
+Merge: aa7c47d 54cf756
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Wed Dec 6 21:32:54 2023 -0600
+
+    Merge pull request #5 from sebastianmov/add-item
+    
+    Add item branch first push
+
+[33mcommit 54cf75666aa392a68f999c474dbd4739ec61b191[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Wed Dec 6 21:31:13 2023 -0600
+
+    src: file names updated
+
+[33mcommit f1058b39678930931d272bc9ac387571c4db84c7[m
+Merge: c2f21c6 685b8d6
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Wed Dec 6 21:27:04 2023 -0600
+
+    Merge branch 'add-item' of github.com:sebastianmov/Proyecto-Integrador-React into add-item
+
+[33mcommit aa7c47dab66c905b27e91cce00c5ec241d0bc818[m
+Merge: 3f0e442 c2f21c6
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Wed Dec 6 21:22:57 2023 -0600
+
+    Merge pull request #4 from sebastianmov/pruebaReactRouterDom
+    
+    src: adjust of file names
+
+[33mcommit c2f21c6ee5e969062a385a20d931a3c7737f45a2[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Wed Dec 6 21:22:05 2023 -0600
+
+    src: adjust of file names
+
+[33mcommit 685b8d6e60117b39cedaeb3a5ab41053a534107d[m
+Author: Sebastian Montes de Oca <ing.montesdeoca94@gmail.com>
+Date:   Tue Dec 5 23:38:35 2023 -0600
+
+    little fixes
+
+[33mcommit 7b5b1478097b61a2c404f2bea9df56483fe52d61[m
+Author: Sebastian Montes de Oca <ing.montesdeoca94@gmail.com>
+Date:   Tue Dec 5 21:07:53 2023 -0600
+
+    addProduct function
+
+[33mcommit fe35e5494b66b5515373d979e68a653e804da465[m
+Author: Sebastian Montes de Oca <ing.montesdeoca94@gmail.com>
+Date:   Tue Dec 5 19:02:56 2023 -0600
+
+    product-class.js creation
+
+[33mcommit 3f0e4429a6b778bcf252eea2cf8bd85b8f4b1aac[m
+Merge: 23bd876 86808ff
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Tue Dec 5 16:22:31 2023 -0600
+
+    Merge pull request #3 from sebastianmov/pruebaReactRouterDom
+    
+    style: aboutUs,contactForm repaired
+
+[33mcommit 86808ffa4c28e1586bc362de452f34966e091f6a[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Tue Dec 5 15:59:32 2023 -0600
+
+    style: aboutUs,contactForm repaired
+
+[33mcommit 23bd87684d6be1a02782a58ca2f1c0f8699b0633[m
+Merge: a48709d 8a964ac
+Author: Alan Navarro <109049589+Alanav29@users.noreply.github.com>
+Date:   Sun Dec 3 23:52:50 2023 -0600
+
+    Merge pull request #2 from sebastianmov/pruebaReactRouterDom
+    
+    style: homeLogoMobile added
+
+[33mcommit 8a964ac1536dec31578321d5b722baf63693417d[m[33m ([m[1;31morigin/pruebaReactRouterDom[m[33m)[m
+Author: Alanav29 <josephalannavarro@gmail.com>
+Date:   Sun Dec 3 23:52:05 2023 -0600
+
+    style: homeLogoMobile added
+
+[33mcommit a48709d81e40f265ed066d12115e6827ba40e71f[m
+Merge: 7ebfa5f 1da368f
+Author: Alan Navarro <109049589+Alanav29@user
