@@ -1,26 +1,32 @@
 import NameInput from "../general/inputs/NameInput";
 import FrameDimensionsInput from "../general/inputs/FrameDimensionsInput";
 import GeneralButton from "../general/buttons/GeneralButton";
+import TextInput from "../general/inputs/TextInput";
+import PriceInput from "../general/inputs/PriceInput";
 import { useForm } from "react-hook-form";
+import createProduct from "../../utils/gallery/addProduct";
 
 const AddProductForm = () => {
   const { handleSubmit, register } = useForm();
 
-  const onSubmit = () => {
-    console.log("algo");
+
+
+  const postProduct = ( data ) => {
+    createProduct(data);
+   
   };
 
   return (
     <>
-      <h1 className="mb-3">Agregar elemento</h1>
-      <form className="w-auto pb-5 pb-md-0" onSubmit={handleSubmit(onSubmit)}>
+      <h1 className="mb-3">Agregar Producto</h1>
+      <form className="w-auto pb-5 pb-md-0" onSubmit={handleSubmit(postProduct)}>
         <NameInput
           register={register}
           placeholderText={"Destellos del desierto"}
           isRequired={true}
           labelText={"Título de la obra"}
           id={"admin-gallery-form-title"}
-          nameText={"admin-gallery-form-title"}
+          nameText={"title"}
         />
 
         <FrameDimensionsInput
@@ -29,7 +35,7 @@ const AddProductForm = () => {
           isRequired={true}
           labelText={"Altura"}
           id={"admin-gallery-form-height"}
-          nameText={"admin-gallery-form-height"}
+          nameText={"height"}
         />
         <FrameDimensionsInput
           register={register}
@@ -37,7 +43,33 @@ const AddProductForm = () => {
           isRequired={true}
           labelText={"Anchura"}
           id={"admin-gallery-form-width"}
-          nameText={"admin-gallery-form-width"}
+          nameText={"width"}
+        />
+        <TextInput
+          register={register}
+          placeholderText={"Amarillo"}
+          isRequired={true}
+          labelText={"Color"}
+          id={"admin-gallery-form-color"}
+          nameText={"color"}
+        />
+
+        <PriceInput
+          register={register}
+          placeholderText={"25000"}
+          isRequired={true}
+          labelText={"Precio"}
+          id={"admin-gallery-form-price"}
+          nameText={"price"}
+        />
+
+        <TextInput
+          register={register}
+          placeholderText={"Óleo"}
+          isRequired={true}
+          labelText={"Técnica"}
+          id={"admin-gallery-form-technique"}
+          nameText={"technique"}
         />
         <GeneralButton
           buttonText={"Enviar"}
