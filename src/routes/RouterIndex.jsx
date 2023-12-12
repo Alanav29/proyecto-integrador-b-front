@@ -6,6 +6,7 @@ import Contact from "../pages/contact/Contact";
 import NavbarMobile from "../components/navbarMobile/NavbarMobile";
 import PageLogoMobile from "../components/navbarMobile/PageLogoMobile";
 import Gallery from "../pages/gallery/Gallery";
+import AddProduct from "../pages/addProduct/AddProduct";
 
 const RouterIndex = () => {
   return (
@@ -17,6 +18,7 @@ const RouterIndex = () => {
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/addProduct" element={<AddProduct />} />
       </Routes>
       <NavbarMobile />
     </>
