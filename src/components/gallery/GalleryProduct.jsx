@@ -5,7 +5,7 @@ const GalleryProduct = ({ product: { title, img, price } }) => {
   return (
     <div>
       <article className="gallery-product d-flex flex-wrap justify-content-center mb-5">
-        <div>
+        <div className="gallery-product-img-container">
           <img
             className="img-fluid"
             src={img}

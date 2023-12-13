@@ -1,18 +1,21 @@
 .gallery-product {
-	display: grid;
-    position: center;
-	margin: 1rem;
-	width: 18rem;
-    
+  display: grid;
+  position: center;
+  margin: 1rem;
+  width: 18rem;
 }
 
 .gallery-product-body {
-	color: black !important;
-    position: upper center;
-	right: 1rem;
-	bottom: 1rem;
-	opacity: 0.5;
-    --hover: 1;
-    font-weight: 400;
-	margin: 2rem 0 0.25rem 0;
+  color: black !important;
+  position: upper center;
+  right: 1rem;
+  bottom: 1rem;
+  opacity: 0.5;
+  --hover: 1;
+  font-weight: 400;
+  margin: 2rem 0 0.25rem 0;
+}
+
+.gallery-product-img-container {
+  max-width: 400px;
 }
