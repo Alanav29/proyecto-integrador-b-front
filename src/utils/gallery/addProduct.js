@@ -1,7 +1,9 @@
+// Traemos la ruta base de la api desde el archivo apiRouterIndex que esta en utils apiRoutes
+import { apiProductsUrl } from "../apiRoutes/apiRouterIndex";
 // Función para la petición POST
 async function createProduct(productData) {
   try {
-    const response = await fetch("http://localhost:4000/api/products", {
+    const response = await fetch(apiProductsUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

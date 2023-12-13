@@ -1,21 +1,24 @@
+// Traemos la ruta base de la api desde el archivo apiRouterIndex que esta en utils apiRoutes
+import { apiProductsUrl } from "../apiRoutes/apiRouterIndex";
+
 // Función para la petición PUT
 async function updateProduct(id, updatedData) {
-    try {
-        const response = await fetch(`http://localhost:4000/api/products/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(updatedData),
-        });
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.error('Error:', error);
-    }
+  try {
+    const response = await fetch(`${apiProductsUrl}${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedData),
+    });
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
-export default updateProduct
+export default updateProduct;
 
 /* headers: {'Content-Type': 'application/json'}: Esta línea define los encabezados HTTP que se enviarán con la solicitud.
 En este caso, se está enviando un encabezado Content-Type con el valor application/json,
