@@ -7,6 +7,7 @@ import NavbarMobile from "../components/navbarMobile/NavbarMobile";
 import PageLogoMobile from "../components/navbarMobile/PageLogoMobile";
 import Gallery from "../pages/gallery/Gallery";
 import AddProduct from "../pages/addProduct/AddProduct";
+import GalleryAdmin from "../pages/galleryAdmin/GalleryAdmin";
 
 const RouterIndex = () => {
   return (
@@ -19,6 +20,7 @@ const RouterIndex = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/addProduct" element={<AddProduct />} />
+        <Route path="/galleryAdmin" element={<GalleryAdmin />} />
       </Routes>
       <NavbarMobile />
     </>
