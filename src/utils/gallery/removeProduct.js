@@ -1,15 +1,17 @@
+// Traemos la ruta base de la api desde el archivo apiRouterIndex que esta en utils apiRoutes
+import { apiProductsUrl } from "../apiRoutes/apiRouterIndex";
+
 // Función para la petición DELETE
 async function deleteProduct(id) {
   try {
-    const response = await fetch(`http://localhost:4000/api/products/${id}`, {
-      method: 'DELETE',
+    const response = await fetch(`${apiProductsUrl}${id}`, {
+      method: "DELETE",
     });
     const data = await response.json();
     console.log(data);
   } catch (error) {
-    console.error('Error:', error);
+    console.error("Error:", error);
   }
 }
 
-
-export default deleteProduct
+export default deleteProduct;

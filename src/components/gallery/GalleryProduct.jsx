@@ -1,6 +1,7 @@
 import "../../styles/gallery/galleryProduct.css";
 
 const GalleryProduct = ({ product: { title, img, price } }) => {
+  console.log(title, img, price);
   return (
     <div>
       <article className="gallery-product d-flex flex-wrap justify-content-center mb-5">

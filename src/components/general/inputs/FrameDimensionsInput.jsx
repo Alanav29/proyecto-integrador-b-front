@@ -12,7 +12,7 @@ const FrameDimensionsInput = ({
   const [fillState, setFillState] = useState(true);
   const [alertMessage, setAlertMessage] = useState("");
 
-  const showAlerMessage = (e) => {
+  const showAlertMessage = (e) => {
     if (e.target.value !== "") {
       setFillState(true);
     } else {
@@ -28,7 +28,7 @@ const FrameDimensionsInput = ({
           {alertMessage}
         </p>
         <input
-          {...register}
+          {...register(nameText)}
           type="text"
           placeholder={placeholderText}
           name={nameText}
@@ -37,10 +37,10 @@ const FrameDimensionsInput = ({
           required={isRequired}
           minLength={"2"}
           onChange={(e) => {
-            e.target.value = e.target.value.replace(/[^0-9.]/g, "");
-            e.target.value = e.target.value.replace(/../g, ".");
-            e.target.value = e.target.value.replace(/^./g, "");
-            showAlerMessage(e);
+            e.target.value = e.target.value.replace(/[^0-9]/g, "");
+            // e.target.value = e.target.value.replace(/\.\./g, ".");
+            // e.target.value = e.target.value.replace(/^\./g, "");
+            showAlertMessage(e);
           }}
         />
         <label htmlFor={id} className="mx-2 px-1">
