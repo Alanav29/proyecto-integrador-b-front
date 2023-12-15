@@ -13,7 +13,7 @@ const TextAreaInput = ({
   const [alertMessage, setAlertMessage] = useState("");
 
   const showAlerMessage = (e) => {
-    if (e.target.value !== "") {
+    if (e.target.value !== "" || isRequired === false) {
       setFillState(true);
     } else {
       setFillState(false);
