@@ -1,3 +1,7 @@
-#gallery{
-          margin-bottom: 100px;
+#gallery {
+  margin-bottom: 100px;
+  columns: 270px auto;
+}
+
+.gallery-products-container {
 }
