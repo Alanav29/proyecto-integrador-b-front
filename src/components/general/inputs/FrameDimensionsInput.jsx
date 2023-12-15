@@ -13,7 +13,7 @@ const FrameDimensionsInput = ({
   const [alertMessage, setAlertMessage] = useState("");
 
   const showAlertMessage = (e) => {
-    if (e.target.value !== "") {
+    if (e.target.value !== "" || isRequired === false) {
       setFillState(true);
     } else {
       setFillState(false);

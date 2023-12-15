@@ -19,8 +19,11 @@ const Gallery = () => {
   }, []);
 
   return (
-    <main id="gallery" className="container-fluid">
-      <section className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+    <main
+      id="gallery"
+      className="container-fluid d-flex justify-content-center mt-4"
+    >
+      <section className="gallery-products-container d-flex flex-wrap justify-content-center">
         {productsArray.map((product) => {
           return <GalleryProduct product={product} key={product._id} />;
         })}
