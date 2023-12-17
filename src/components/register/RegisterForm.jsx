@@ -3,8 +3,6 @@ import GeneralButton from "../general/buttons/GeneralButton";
 import EmailTextInput from "../general/inputs/EmailTextInput";
 import NameInput from "../general/inputs/NameInput";
 import PhoneInput from "../general/inputs/PhoneInput";
-import TextAreaInput from "../general/inputs/TextAreaInput";
-import TextInput from "../general/inputs/TextInput";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import validator from "validator";
@@ -71,24 +69,8 @@ const RegisterForm = () => {
           nameText={"emailjs_phone"}
         />
 
-        <TextInput
-          register={register}
-          placeholderText={"Asunto del mensaje"}
-          isRequired={true}
-          labelText={"Asunto"}
-          id={"register-form-subject"}
-          nameText={"emailjs_issue"}
-        />
-        <TextAreaInput
-          register={register}
-          placeholderText={"Escribe aquí tu mensaje"}
-          isRequired={true}
-          labelText={"Mensaje"}
-          id={"register-form-message"}
-          nameText={"emailjs_message"}
-        />
         <GeneralButton
-          buttonText={"Enviar"}
+          buttonText={"Registro"}
           buttonColorClass={"bg-black text-white"}
         />
       </form>
