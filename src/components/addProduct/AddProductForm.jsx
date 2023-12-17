@@ -4,22 +4,23 @@ import GeneralButton from "../general/buttons/GeneralButton";
 import TextInput from "../general/inputs/TextInput";
 import PriceInput from "../general/inputs/PriceInput";
 import { useForm } from "react-hook-form";
-import createProduct from "../../utils/gallery/addProduct";
+import addProduct from "../../utils/gallery/addProduct";
 
 const AddProductForm = () => {
-  const { handleSubmit, register } = useForm();
+  const { handleSubmit, register, reset } = useForm();
 
-
-
-  const postProduct = ( data ) => {
-    createProduct(data);
-   
+  const postProduct = (data) => {
+    addProduct(data);
+    reset();
   };
 
   return (
     <>
       <h1 className="mb-3">Agregar Producto</h1>
-      <form className="w-auto pb-5 pb-md-0" onSubmit={handleSubmit(postProduct)}>
+      <form
+        className="w-auto pb-5 pb-md-0"
+        onSubmit={handleSubmit(postProduct)}
+      >
         <NameInput
           register={register}
           placeholderText={"Destellos del desierto"}

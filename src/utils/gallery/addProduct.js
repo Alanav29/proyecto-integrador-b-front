@@ -1,7 +1,7 @@
 // Traemos la ruta base de la api desde el archivo apiRouterIndex que esta en utils apiRoutes
 import { apiProductsUrl } from "../apiRoutes/apiRouterIndex";
 // Función para la petición POST
-async function createProduct(productData) {
+async function addProduct(productData) {
   try {
     const response = await fetch(apiProductsUrl, {
       method: "POST",
@@ -17,7 +17,7 @@ async function createProduct(productData) {
   }
 }
 
-export default createProduct;
+export default addProduct;
 
 /* headers: {'Content-Type': 'application/json'}: Esta línea define los encabezados HTTP que se enviarán con la solicitud.
 En este caso, se está enviando un encabezado Content-Type con el valor application/json,

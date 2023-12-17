@@ -10,17 +10,20 @@ const NavbarMobile = () => {
           <p>Inicio</p>
         </Link>
         <Link
-          to="aboutUs"
+          to="/aboutUs"
           className="px-2 d-flex flex-column align-items-center"
         >
           <i className="bi bi-patch-question" />
           <p>Nosotros</p>
         </Link>
-        <Link className="px-2 d-flex flex-column align-items-center">
+        <Link
+          className="px-2 d-flex flex-column align-items-center"
+          to="/gallery"
+        >
           <i className="bi bi-columns-gap" />
           <p>Galería</p>
         </Link>
-        <Link className="px-2 d-flex flex-column align-items-center">
+        <Link className="px-2 d-flex flex-column align-items-center" to="">
           <i className="bi bi-person-circle" />
           <p>Cuenta</p>
         </Link>
