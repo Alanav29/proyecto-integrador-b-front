@@ -16,7 +16,7 @@ const NavBar = () => {
               <MenuOption pageToConnect={"/gallery"}>GALERIA</MenuOption>
               <MenuOption pageToConnect={"/aboutUs"}>NOSOTROS</MenuOption>
               <MenuOption pageToConnect={"/contact"}>CONTACTO</MenuOption>
-              <MenuOption pageToConnect={"/account"}>CUENTA</MenuOption>
+              <MenuOption pageToConnect={"/logIn"}>CUENTA</MenuOption>
               <MenuOption pageToConnect={"/cart"}>CARRITO</MenuOption>
               <MenuOption pageToConnect={"/galLeryAdmin"}>ADMIN</MenuOption>
             </ul>
