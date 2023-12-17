@@ -19,7 +19,6 @@ const NavBar = () => {
               <MenuOption pageToConnect={"/account"}>CUENTA</MenuOption>
               <MenuOption pageToConnect={"/cart"}>CARRITO</MenuOption>
               <MenuOption pageToConnect={"/galleryAdmin"}>ADMIN</MenuOption>
-              <MenuOption pageToConnect={"/register"}>REGISTRO</MenuOption>
             </ul>
           </div>
         </div>
