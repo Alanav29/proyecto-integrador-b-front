@@ -1,11 +1,18 @@
 #logo-navbar {
-	height: 35px;
+  height: 35px;
 }
 
 #navbar a:focus {
-	color: blueviolet;
+  color: blueviolet;
 }
 
 #navbar {
-	background-color: rgb(246, 246, 246);
+  background-color: rgb(246, 246, 246);
+}
+
+.dropdown-menu[data-bs-popper] {
+  top: 100%;
+  left: auto !important;
+  right: 0%;
+  margin-top: var(--bs-dropdown-spacer);
 }

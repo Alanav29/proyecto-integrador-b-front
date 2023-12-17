@@ -33,7 +33,7 @@ function GalleryAdmin() {
           </div>
         </div>
       </div> */}
-      <div className="product-properties">
+      <div className="product-properties mt-4">
         <label>Imagen</label>
         <label>Titulo</label>
         <label>Cantidad</label>
