@@ -13,7 +13,10 @@ const PhoneInput = ({
   const [alertMessage, setAlertMessage] = useState("");
 
   const showAlerMessage = (e) => {
-    if (e.target.value !== "" && e.target.value.length >= 10) {
+    if (
+      (e.target.value !== "" && e.target.value.length >= 10) ||
+      isRequired === false
+    ) {
       setFillState(true);
     } else if (e.target.value.length < 10) {
       setFillState(false);

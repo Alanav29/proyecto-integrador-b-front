@@ -25,7 +25,7 @@ const EmailTextInput = ({
 
   const showAlerMessage = (e) => {
     const emailValue = e.target.value;
-    if (validator.isEmail(emailValue)) {
+    if (validator.isEmail(emailValue) || isRequired === false) {
       setFillState(true);
     } else {
       setFillState(false);
