@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userFeature = createSlice({
   name: "user",
   initialState: {
-    value: undefined,
+    value: { isAdmin: false },
   },
   reducers: {
     addActiveUser: (state, action) => {
