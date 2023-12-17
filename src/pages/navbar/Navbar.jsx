@@ -1,12 +1,9 @@
 import MenuOption from "../../components/navbar/MenuOption";
 import { Link, Outlet } from "react-router-dom";
 import "../../styles/navbar/navbarStyle.css";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../features/userFeature";
 import AccountOption from "../../components/navbar/AccountOption";
 
 const NavBar = () => {
-  // const user = useSelector(selectUser);
   return (
     <>
       <nav className="navbar navbar-expand d-none d-md-block py-1" id="navbar">

@@ -7,9 +7,9 @@ const Gallery = () => {
   const products = useSelector(selectProducts);
 
   return (
-    <main id="gallery" className="container mt-4">
+    <main id="gallery" className="container-fluid mt-4">
       <h1>Galería</h1>
-      <section className="gallery-products-container mx-auto">
+      <section className="gallery-products-container px-3">
         {products.map((product) => {
           return <GalleryProduct product={product} key={product._id} />;
         })}

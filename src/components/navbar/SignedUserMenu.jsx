@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const SignedUserMenu = () => {
   return (
-    <li>
+    <ul className="p-0">
       <Link className="dropdown-item" aria-current="page" to="/galleryAdmin">
         MI PERFIL
       </Link>
@@ -10,7 +10,7 @@ const SignedUserMenu = () => {
         CERRAR SESION
       </Link>
       <></>
-    </li>
+    </ul>
   );
 };
 

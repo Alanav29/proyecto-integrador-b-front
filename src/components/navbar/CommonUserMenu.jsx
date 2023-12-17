@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 const CommonUserMenu = () => {
   return (
-    <li>
+    <ul className="p-0">
       <Link className="dropdown-item" aria-current="page" to="/galleryAdmin">
         INICIAR SESION
       </Link>
       <Link className="dropdown-item" aria-current="page" to="/">
         REGISTRARSE
       </Link>
-    </li>
+    </ul>
   );
 };
 
