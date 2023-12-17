@@ -1,7 +1,15 @@
 #gallery {
   margin-bottom: 100px;
-  columns: 270px auto;
 }
 
 .gallery-products-container {
+  columns: 200px 5;
+  column-fill: balance;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-products-container {
+    column-count: 2; /* Cambiar a dos columnas en pantallas más pequeñas */
+    column-width: auto; /* Ajustar el ancho automático de las columnas */
+  }
 }
