@@ -1,4 +1,4 @@
-#register-page{
+#sign-up-page{
     min-height: calc(100vh - 48px);
     background-image: url(../../assets/img/general/cuadro1Gaby.jpg);
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@
     filter: grayscale(0.1);
 }
 
-#register-form-container{
+#sign-up-form-container{
     width: 500px;
     height: auto;
     border: 3px solid black;
