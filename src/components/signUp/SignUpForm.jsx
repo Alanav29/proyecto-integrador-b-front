@@ -5,7 +5,7 @@ import NameInput from "../general/inputs/NameInput";
 import PasswordInput from "../general/inputs/PasswordInput";
 import PhoneInput from "../general/inputs/PhoneInput";
 import { useForm } from "react-hook-form";
-import validator from "validator";
+// import validator from "validator";
 
 const SignUpForm = () => {
   const { handleSubmit, register } = useForm();
