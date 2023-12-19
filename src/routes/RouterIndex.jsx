@@ -8,9 +8,12 @@ import PageLogoMobile from "../components/navbarMobile/PageLogoMobile";
 import Gallery from "../pages/gallery/Gallery";
 import AddProduct from "../pages/addProduct/AddProduct";
 import GalleryAdmin from "../pages/galleryAdmin/GalleryAdmin";
-import LogIn from "../pages/logIn/LogIn";
+import SignUp from "../pages/signUp/SignUp";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userFeature";
 
 const RouterIndex = () => {
+  const user = useSelector(selectUser);
   return (
     <>
       <NavBar />
@@ -21,8 +24,12 @@ const RouterIndex = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/addProduct" element={<AddProduct />} />
-        <Route path="/galleryAdmin" element={<GalleryAdmin />} />
-        <Route path="/LogIn" element={<LogIn />} />
+        <Route path="/signUp" element={<SignUp />} />
+        {user.isAdmin ? (
+          <Route path="/galleryAdmin" element={<GalleryAdmin />} />
+        ) : (
+          <></>
+        )}
       </Routes>
       <NavbarMobile />
     </>

@@ -1,6 +1,7 @@
 import MenuOption from "../../components/navbar/MenuOption";
 import { Link, Outlet } from "react-router-dom";
 import "../../styles/navbar/navbarStyle.css";
+import AccountOption from "../../components/navbar/AccountOption";
 
 const NavBar = () => {
   return (
@@ -16,9 +17,8 @@ const NavBar = () => {
               <MenuOption pageToConnect={"/gallery"}>GALERIA</MenuOption>
               <MenuOption pageToConnect={"/aboutUs"}>NOSOTROS</MenuOption>
               <MenuOption pageToConnect={"/contact"}>CONTACTO</MenuOption>
-              <MenuOption pageToConnect={"/logIn"}>CUENTA</MenuOption>
+              <AccountOption />
               <MenuOption pageToConnect={"/cart"}>CARRITO</MenuOption>
-              <MenuOption pageToConnect={"/galLeryAdmin"}>ADMIN</MenuOption>
             </ul>
           </div>
         </div>

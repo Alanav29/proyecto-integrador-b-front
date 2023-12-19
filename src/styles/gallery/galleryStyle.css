@@ -1,7 +1,15 @@
 #gallery {
   margin-bottom: 100px;
-  columns: 270px auto;
 }
 
 .gallery-products-container {
+  columns: 200px 5;
+  column-gap: 1rem;
+  column-fill: balance;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-products-container {
+    columns: 2 auto;
+  }
 }

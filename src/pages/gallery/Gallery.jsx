@@ -1,30 +1,16 @@
-import { useEffect, useState } from "react";
 import "../../styles/gallery/galleryStyle.css";
 import GalleryProduct from "../../components/gallery/GalleryProduct";
-import { apiProductsUrl } from "../../utils/apiRoutes/apiRouterIndex";
+import { useSelector } from "react-redux";
+import { selectProducts } from "../../features/productsFeature";
 
 const Gallery = () => {
-  const [productsArray, setProductsArray] = useState([]);
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const response = await fetch(apiProductsUrl);
-        const data = await response.json();
-        setProductsArray(data);
-      } catch (error) {
-        console.error("Hubo un problema al obtener los productos: ", error);
-      }
-    };
-    getProducts();
-  }, []);
+  const products = useSelector(selectProducts);
 
   return (
-    <main
-      id="gallery"
-      className="container-fluid d-flex justify-content-center mt-4"
-    >
-      <section className="gallery-products-container d-flex flex-wrap justify-content-center">
-        {productsArray.map((product) => {
+    <main id="gallery" className="container-fluid mt-4">
+      <h1>Galería</h1>
+      <section className="gallery-products-container px-3">
+        {products.map((product) => {
           return <GalleryProduct product={product} key={product._id} />;
         })}
       </section>
