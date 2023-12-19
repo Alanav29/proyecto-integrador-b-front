@@ -3,6 +3,11 @@
 }
 
 .gallery-products-container {
+  width: 90%;
+  /* height: 100vh; */
+}
+
+/* .gallery-products-container {
   columns: 200px 5;
   column-gap: 1rem;
   column-fill: balance;
@@ -12,4 +17,4 @@
   .gallery-products-container {
     columns: 2 auto;
   }
-}
+} */
