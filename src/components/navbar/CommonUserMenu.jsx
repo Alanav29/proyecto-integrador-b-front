@@ -6,7 +6,7 @@ const CommonUserMenu = () => {
       <Link className="dropdown-item" aria-current="page" to="/galleryAdmin">
         INICIAR SESION
       </Link>
-      <Link className="dropdown-item" aria-current="page" to="/">
+      <Link className="dropdown-item" aria-current="page" to="/signUp">
         REGISTRARSE
       </Link>
     </ul>
