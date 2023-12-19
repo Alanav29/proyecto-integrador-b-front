@@ -4,6 +4,7 @@ import GeneralButton from "../general/buttons/GeneralButton";
 import EmailTextInput from "../general/inputs/EmailTextInput";
 import { useForm } from "react-hook-form";
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
+import PasswordInput from "../general/inputs/PasswordInput";
 // import validator from "validator";
 
 const LoginForm = () => {
@@ -45,6 +46,16 @@ const LoginForm = () => {
           id={"contact-form-email"}
           nameText={"login-form-email"}
           />
+
+          <PasswordInput
+          placeholderText={"Intrduzca aquí su contraseña"}
+          labelText={"Contraseña"}
+          id={"password-login-form"}
+          isRequired={true}
+          nameText={"password"}
+          register={register}
+          />
+
           <div className="d-flex flex-column align-items-center justify-content-center">
   <div className="d-grid w-100">
     <GeneralButton
