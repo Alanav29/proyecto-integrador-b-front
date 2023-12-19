@@ -6,13 +6,13 @@ export const userFeature = createSlice({
     value: { isAdmin: false },
   },
   reducers: {
-    addActiveUser: (state, action) => {
+    setUser: (state, action) => {
       state.value = action.payload;
     },
   },
 });
 
-export const { addActiveUser } = userFeature.actions;
+export const { setUser } = userFeature.actions;
 export const selectUser = (state) => state.user.value;
 
 export default userFeature.reducer;
