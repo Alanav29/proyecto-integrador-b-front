@@ -5,6 +5,7 @@ import NameInput from "../general/inputs/NameInput";
 import PasswordInput from "../general/inputs/PasswordInput";
 import PhoneInput from "../general/inputs/PhoneInput";
 import { useForm } from "react-hook-form";
+import createUser from "../../utils/signUp/addUser";
 // import validator from "validator";
 
 const SignUpForm = () => {
@@ -12,14 +13,20 @@ const SignUpForm = () => {
   const [passwordAlert, setPasswordAlert] = useState("d-none");
 
   const onSubmit = (data) => {
-
     if (data.password !== data["confirm-password"]) {
-      setPasswordAlert("d-block")
+      setPasswordAlert("d-block");
     } else {
-      setPasswordAlert("d-none")
+      setPasswordAlert("d-none");
+      const requiredData = {
+        name: data.name + data.lastName,
+        email: data.email,
+        phoneNumber: data.phoneNumber,
+        password: data.password,
+      };
+      console.log(data);
+      createUser(requiredData);
     }
-    console.log(data);
-  }
+  };
 
   return (
     <>
@@ -34,7 +41,7 @@ const SignUpForm = () => {
           isRequired={true}
           labelText={"Nombre"}
           id={"sign-up-form-name"}
-          nameText={"sign-up-form-name"}
+          nameText={"name"}
         />
 
         <NameInput
@@ -42,8 +49,8 @@ const SignUpForm = () => {
           placeholderText={"Alvarado"}
           isRequired={true}
           labelText={"Apellido"}
-          id={"sign-up-form-name"}
-          nameText={"sign-up-form-name"}
+          id={"sign-up-form-last-name"}
+          nameText={"lastName"}
         />
 
         <PhoneInput
@@ -52,7 +59,7 @@ const SignUpForm = () => {
           isRequired={true}
           labelText={"Teléfono"}
           id={"sign-up-form-phone"}
-          nameText={"sign-up-form-phone"}
+          nameText={"phoneNumber"}
         />
 
         <EmailTextInput
@@ -61,7 +68,7 @@ const SignUpForm = () => {
           isRequired={true}
           labelText={"Email"}
           id={"sign-up-form-email"}
-          nameText={"sign-up-form-email"}
+          nameText={"email"}
         />
 
         <PasswordInput
@@ -81,7 +88,9 @@ const SignUpForm = () => {
           id={"sign-up-form-confirm-password"}
           nameText={"confirm-password"}
         />
-        <p className={`${passwordAlert} text-danger`}  >Las contraseñas no coinciden  </p>
+        <p className={`${passwordAlert} text-danger`}>
+          Las contraseñas no coinciden{" "}
+        </p>
         <GeneralButton
           buttonText={"Enviar"}
           buttonColorClass={"bg-black text-white"}
