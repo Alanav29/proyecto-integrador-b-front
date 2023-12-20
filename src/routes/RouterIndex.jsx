@@ -11,6 +11,7 @@ import GalleryAdmin from "../pages/galleryAdmin/GalleryAdmin";
 import SignUp from "../pages/signUp/SignUp";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userFeature";
+import LogIn from "../pages/logIn/LogIn";
 
 const RouterIndex = () => {
   const user = useSelector(selectUser);
@@ -25,6 +26,7 @@ const RouterIndex = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/logIn" element={<LogIn/>}/>
         {user.isAdmin ? (
           <Route path="/galleryAdmin" element={<GalleryAdmin />} />
         ) : (
