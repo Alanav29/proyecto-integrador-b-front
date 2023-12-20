@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import ToRegisterButton from "../general/buttons/ToRegisterButton";
 import GeneralButton from "../general/buttons/GeneralButton";
 import EmailTextInput from "../general/inputs/EmailTextInput";
@@ -13,14 +13,20 @@ import { setUser } from "../../features/userFeature";
 // Solo falta que Alan corrija la API
 
 const LoginForm = () => {
+  const [errorMessage, setErrorMessage] = useState("");
   const { handleSubmit, register } = useForm();
   const dispatch = useDispatch();
-  
   
    const getUserData = async (data) => {
     console.log(data);
     const userData = await logInFunction(data);
-    dispatch(setUser(userData));
+    if (userData['message'] == 'Incorrect name or password') {
+      setErrorMessage('Usuario o contraseña incorrecta')
+    }
+    else{
+      setErrorMessage('')
+      dispatch(setUser(userData));
+    }
    };
 
   return (
@@ -61,7 +67,8 @@ const LoginForm = () => {
           <GeneralButton
           buttonText={"Ingresar"}
           buttonColorClass={"bg-primary text-white my-2 mt-5 btn-block"}
-    />
+          />
+          <p className="text-danger m-0">{errorMessage}</p>
       </form>
       <div className="d-flex flex-column align-items-center justify-content-center pb-5">
     <ToRegisterButton
