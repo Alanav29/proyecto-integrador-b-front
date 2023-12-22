@@ -15,6 +15,11 @@ async function logInFunction(userData) {
         });
         data = await response.json();
         console.log(data);
+        if (JSON.stringify(data).includes(userData.email) && JSON.stringify(data).includes(userData.password)) {
+            console.log("El usuario existe en la API");
+        } else {
+            console.log("El usuario no existe en la API");
+        }
     } catch (error) {
         console.error("Error: " + error);
     }

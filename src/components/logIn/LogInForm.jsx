@@ -21,6 +21,7 @@ const LoginForm = () => {
     console.log(data);
     const userData = await logInFunction(data);
     dispatch(setUser(userData));
+    
    };
 
   return (
