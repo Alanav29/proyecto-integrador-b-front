@@ -22,10 +22,10 @@ const PasswordInput = ({
             setFillState(true);
         } else if (e.target.value.length < 8) {
             setFillState(false);
-            setAlertMessage("Introduzca un contraseña de 8 digitos");
+            setAlertMessage("Introduzca un contraseña de 8 dígitos, para mayor seguridad usa una mayuscula y un simbolo.");
         } else {
             setFillState(false);
-            setAlertMessage("Llena este campo");
+            setAlertMessage("Llena este campo.");
         }
     };
 

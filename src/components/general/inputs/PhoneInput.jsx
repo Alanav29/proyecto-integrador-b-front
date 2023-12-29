@@ -20,7 +20,7 @@ const PhoneInput = ({
       setFillState(true);
     } else if (e.target.value.length < 10) {
       setFillState(false);
-      setAlertMessage("Introduzca un numero mayor a 10 digitos");
+      setAlertMessage("Introduzca un número de 10 dígitos");
     } else {
       setFillState(false);
       setAlertMessage("Llena este campo");
@@ -38,7 +38,7 @@ const PhoneInput = ({
         id={id}
         className="p-2"
         required={isRequired}
-        maxLength={"11"}
+        maxLength={"10"}
         minLength={"10"}
         onChange={(e) => {
           e.target.value = e.target.value.replace(/[^0-9]/g, "");
