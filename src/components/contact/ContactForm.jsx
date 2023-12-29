@@ -11,6 +11,22 @@ import validator from "validator";
 
 const ContactForm = () => {
   const { handleSubmit, register } = useForm();
+  const [contactFormAlert, setContactFormAlert] = useState("exito");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  let mensaje;
+
+
+  switch (contactFormAlert) {
+    case 'exito':
+      mensaje = 'Tu mensaje ha sido enviado. Muchas gracias por contactarnos, en breve tendrás una respuesta';
+      break;
+    case 'error':
+      mensaje = 'Hubo un error al enviar tu mensaje';
+      break;
+    default:
+      mensaje = 'Error desconocido, ni dios sabe qué pasó';
+  }
 
   const sendEmail = (data) => {
     const serviceID = "default_service";
@@ -21,9 +37,13 @@ const ContactForm = () => {
       .send(serviceID, templateID, data, publicKey)
       .then((response) => {
         console.log("Email enviado!", response.status, response.text);
+        setContactFormAlert('exito');
+        setIsSubmitted(true); 
       })
       .catch((error) => {
         console.error("Error al enviar el email:", error);
+        setContactFormAlert('error');
+        setIsSubmitted(true);
       });
   };
 
@@ -92,6 +112,11 @@ const ContactForm = () => {
           buttonColorClass={"bg-black text-white"}
         />
       </form>
+      {isSubmitted && (
+        <p className={`${contactFormAlert}`}>
+          {mensaje}
+        </p>
+      )}
     </>
   );
 };
