@@ -12,7 +12,7 @@ const TextAreaInput = ({
   const [fillState, setFillState] = useState(true);
   const [alertMessage, setAlertMessage] = useState("");
 
-  const showAlerMessage = (e) => {
+  const showAlertMessage = (e) => {
     if (e.target.value !== "" || isRequired === false) {
       setFillState(true);
     } else {
@@ -25,14 +25,14 @@ const TextAreaInput = ({
     <div className="text-area-input d-flex flex-column-reverse">
       <p className={fillState ? "d-none" : "text-danger m-0"}>{alertMessage}</p>
       <textarea
-        {...register(nameText)}
         type="text"
         placeholder={placeholderText}
         name={nameText}
         id={id}
         className="p-2"
         required={isRequired}
-        onChange={(e) => showAlerMessage(e)}
+        onChange={(e) => showAlertMessage(e)}
+        {...register(nameText)}
       />
       <label htmlFor={id} className="mx-2 px-1">
         {labelText}

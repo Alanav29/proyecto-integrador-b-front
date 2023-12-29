@@ -10,6 +10,7 @@ const AddProductForm = () => {
   const { handleSubmit, register, reset } = useForm();
 
   const postProduct = (data) => {
+    console.log(data);
     addProduct(data);
     reset();
   };
