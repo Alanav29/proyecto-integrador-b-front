@@ -29,7 +29,6 @@ const PriceInput = ({
     <div className="text-input d-flex flex-column-reverse">
       <p className={fillState ? "d-none" : "text-danger m-0"}>{alertMessage}</p>
       <input
-        {...register(nameText)}
         type="number"
         placeholder={placeholderText}
         name={nameText}
@@ -41,6 +40,7 @@ const PriceInput = ({
           e.target.value = e.target.value.replace(/[^0-9]/g, "");
           showAlertMessage(e);
         }}
+        {...register(nameText)}
       />
       <label htmlFor={id} className="mx-2 px-1">
         {labelText}

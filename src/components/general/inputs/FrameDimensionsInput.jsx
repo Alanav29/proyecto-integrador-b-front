@@ -28,7 +28,6 @@ const FrameDimensionsInput = ({
           {alertMessage}
         </p>
         <input
-          {...register(nameText)}
           type="text"
           placeholder={placeholderText}
           name={nameText}
@@ -42,6 +41,7 @@ const FrameDimensionsInput = ({
             // e.target.value = e.target.value.replace(/^\./g, "");
             showAlertMessage(e);
           }}
+          {...register(nameText)}
         />
         <label htmlFor={id} className="mx-2 px-1">
           {labelText}

@@ -8,9 +8,9 @@ const Gallery = () => {
   const products = useSelector(selectProducts);
 
   return (
-    <main id="gallery" className="container-fluid mt-4">
-      <h1>Galería</h1>
-      <section className="mx-4">
+    <main id="gallery" className="container-fluid">
+      <h1 className="mx-3 fs-2">Galería</h1>
+      <section className="mx-2 mx-sm-4">
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 425: 1, 450: 2, 740: 3, 1024: 4 }}
         >
