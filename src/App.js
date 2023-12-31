@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./App.css";
 import RouterIndex from "./routes/RouterIndex.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { useDispatch } from "react-redux";

@@ -46,7 +46,7 @@
 }
 
 .gallery-product-btn {
-  background: var(--accent-color);
+  background: var(--second-accent-color);
   color: white;
   padding: 0.35em;
   padding-left: 1.2em;
@@ -55,7 +55,7 @@
   border: none;
   display: flex;
   align-items: center;
-  /* box-shadow: inset 0 0 1.6em -0.6em var(--accent-color); */
+  /* box-shadow: inset 0 0 1.6em -0.6em var(--second-accent-color); */
   overflow: hidden;
   position: relative;
   height: 2.8em;
@@ -73,7 +73,7 @@
   height: 2.2em;
   width: 2.2em;
   border-radius: 0.7em;
-  /* box-shadow: 0.1em 0.1em 0.6em 0.2em var(--accent-color); */
+  /* box-shadow: 0.1em 0.1em 0.6em 0.2em var(--second-accent-color); */
   right: 0.3em;
   transition: all 0.2s;
 }

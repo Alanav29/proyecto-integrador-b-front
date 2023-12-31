@@ -1,16 +1,17 @@
-:root{
-	--accent-color: rgb(47, 121, 32);
-	--input-background-color: white;
-	--input-outline-color: black;
+:root {
+  --accent-color: rgb(47, 121, 32);
+  --second-accent-color: #e7a900;
+  --input-background-color: white;
+  --input-outline-color: black;
 }
 
 body {
-	font-family: "DM Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 .justify {
-	text-align: justify;
+  text-align: justify;
 }
 
 .accent-color {
- color: var(--accent-color)!important;
+  color: var(--accent-color) !important;
 }
