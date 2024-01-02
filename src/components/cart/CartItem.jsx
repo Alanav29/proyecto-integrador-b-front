@@ -1,5 +1,14 @@
+import { useDispatch } from "react-redux";
 import "../../styles/cart/cartItem.css";
+import { removeCartItem } from "../../features/cartFeature";
+
 const CartItem = ({ product }) => {
+  const dispatch = useDispatch();
+
+  const delItem = () => {
+    dispatch(removeCartItem(product._id));
+  };
+
   return (
     <div className="d-flex cart-item my-2">
       <div className="cart-item-img">
@@ -21,7 +30,7 @@ const CartItem = ({ product }) => {
           {`$ ${product.price}`}
         </p>
       </div>
-      <button className="fs-5 mx-3 my-auto delete-item-btn">
+      <button onClick={delItem} className="fs-5 mx-3 my-auto delete-item-btn">
         <i className="bi bi-trash3-fill"></i>
       </button>
     </div>

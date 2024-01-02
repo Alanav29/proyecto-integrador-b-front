@@ -18,6 +18,8 @@ const Cart = () => {
   useEffect(() => {
     if (cart.length > 0) {
       setCartItems(createCartCards(cart));
+    } else {
+      setCartItems("Tu carrito se encuentra vacío");
     }
   }, [cart]);
 
