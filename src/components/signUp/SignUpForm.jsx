@@ -6,13 +6,44 @@ import PasswordInput from "../general/inputs/PasswordInput";
 import PhoneInput from "../general/inputs/PhoneInput";
 import { useForm } from "react-hook-form";
 import createUser from "../../utils/signUp/addUser";
-// import validator from "validator";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+
 
 const SignUpForm = () => {
-  const { handleSubmit, register } = useForm();
+  
+  const notifySuccess = ()=> {
+      toast.success("¡Su registro se ha completado con éxito!", { 
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+  };
+  const notifyError = (message)=>{
+     toast.error(message,  {
+    position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+  };
+  const { handleSubmit, register, reset } = useForm();
   const [passwordAlert, setPasswordAlert] = useState("d-none");
-
-  const onSubmit = (data) => {
+  const navigate = useNavigate();
+  const onSubmit = async (data) => {
     if (data.password !== data["confirm-password"]) {
       setPasswordAlert("d-block");
     } else {
@@ -24,13 +55,18 @@ const SignUpForm = () => {
         password: data.password,
       };
       console.log(data);
-      createUser(requiredData);
+    const userData = await createUser(requiredData);
+    userData.email ? notifySuccess(): notifyError(userData.message);
+    reset();  
+      
+    // navigate("/") 
+      
     }
   };
 
   return (
     <>
-      <h1 className="mb-3">Registrate</h1>
+      <h1 className="mb-3">Regístrate</h1>
       <form
         className="w-auto h-auto pb-5 pb-md-0"
         onSubmit={handleSubmit(onSubmit)}
@@ -73,7 +109,7 @@ const SignUpForm = () => {
 
         <PasswordInput
           register={register}
-          placeholderText={"8 caracteres A-Z a-z 0-9 -_"}
+          placeholderText={"8 caracteres"}
           isRequired={true}
           labelText={"Crea tu contraseña"}
           id={"sign-up-form-password"}
@@ -96,8 +132,10 @@ const SignUpForm = () => {
           buttonColorClass={"bg-black text-white"}
         />
       </form>
+      <ToastContainer/>
     </>
   );
 };
+
 
 export default SignUpForm;
