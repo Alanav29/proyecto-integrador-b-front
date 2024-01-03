@@ -1,0 +1,9 @@
+#cart-items-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #cart-items-container {
+    width: 650px;
+  }
+}

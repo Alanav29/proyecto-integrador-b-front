@@ -9,6 +9,7 @@ import logInFunction from "../../utils/logIn/logInFunction";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../features/userFeature";
 import { useNavigate } from "react-router";
+import saveUserLS from "../../utils/localStorage/saveUserLS";
 // import validator from "validator";
 
 const LoginForm = () => {
@@ -23,10 +24,10 @@ const LoginForm = () => {
     if (userData.email) {
       setErrorMessage("d-none");
       dispatch(setUser(userData));
+      saveUserLS(userData);
       reset();
       navigate("/");
     } else {
-      reset();
       setErrorMessage("");
     }
   };
@@ -71,9 +72,10 @@ const LoginForm = () => {
         <p className={`text-danger m-0 ${errorMessage}`}>
           Usuario o contraseña incorrecta
         </p>
+
         <GeneralButton
           buttonText={"Ingresar"}
-          buttonColorClass={"bg-primary text-white my-2 mt-5 btn-block"}
+          buttonColorClass={"bg-primary text-white my-2 mt-2 btn-block"}
         />
       </form>
       <div className="d-flex flex-column align-items-center justify-content-center pb-5">

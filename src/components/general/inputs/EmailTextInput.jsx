@@ -23,7 +23,7 @@ const EmailTextInput = ({
     e.target.value = e.target.value.replace(/@@/g, "@");
   };
 
-  const showAlerMessage = (e) => {
+  const showAlertMessage = (e) => {
     const emailValue = e.target.value;
     if (validator.isEmail(emailValue) || isRequired === false) {
       setFillState(true);
@@ -37,7 +37,6 @@ const EmailTextInput = ({
     <div className="text-input d-flex flex-column-reverse">
       <p className={fillState ? "d-none" : "text-danger m-0"}>{alertMessage}</p>
       <input
-        {...register(nameText)}
         type="email"
         placeholder={placeholderText}
         name={nameText}
@@ -46,8 +45,9 @@ const EmailTextInput = ({
         required={isRequired}
         onChange={(e) => {
           formatInput(e);
-          showAlerMessage(e);
+          showAlertMessage(e);
         }}
+        {...register(nameText)}
       />
       <label htmlFor={id} className="mx-2 px-1">
         {labelText}

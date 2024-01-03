@@ -31,7 +31,6 @@ const PhoneInput = ({
     <div className="text-input d-flex flex-column-reverse">
       <p className={fillState ? "d-none" : "text-danger m-0"}>{alertMessage}</p>
       <input
-        {...register(nameText)}
         type="text"
         placeholder={placeholderText}
         name={nameText}
@@ -44,6 +43,7 @@ const PhoneInput = ({
           e.target.value = e.target.value.replace(/[^0-9]/g, "");
           showAlerMessage(e);
         }}
+        {...register(nameText)}
       />
       <label htmlFor={id} className="mx-2 px-1">
         {labelText}
