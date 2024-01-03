@@ -75,7 +75,7 @@ const LoginForm = () => {
 
         <GeneralButton
           buttonText={"Ingresar"}
-          buttonColorClass={"bg-primary text-white my-2 mt-5 btn-block"}
+          buttonColorClass={"bg-primary text-white my-2 mt-2 btn-block"}
         />
       </form>
       <div className="d-flex flex-column align-items-center justify-content-center pb-5">
