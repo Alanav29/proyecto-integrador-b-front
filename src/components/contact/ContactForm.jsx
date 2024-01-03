@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form";
 import validator from "validator";
 
 const ContactForm = () => {
-  const { handleSubmit, register } = useForm();
+  const { handleSubmit, register, reset } = useForm();
   const [contactFormAlert, setContactFormAlert] = useState("exito");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -53,6 +53,7 @@ const ContactForm = () => {
       data.emailjs_phone.length > 9
     ) {
       sendEmail(data);
+      reset();
     } else {
       console.log("faltan datos");
     }
