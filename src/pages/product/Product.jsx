@@ -6,12 +6,13 @@ import { addToCart } from "../../features/cartFeature";
 
 const Product = () => {
   const { productId } = useParams();
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState({ img: { secure_url: "" } });
   const dispatch = useDispatch();
 
   const productRequest = async () => {
     const data = await getProduct(productId);
     data.title ? setProduct(data) : setProduct({ title: "No disponible" });
+    console.log(data);
   };
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const Product = () => {
     <section className="container-fluid d-flex">
       <div>
         <img
-          src={product.img}
+          src={product.img.secure_url}
           alt={`Fotografia del cuadro que lleva por nombre ${product.title}`}
         />
       </div>

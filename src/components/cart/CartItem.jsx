@@ -13,7 +13,7 @@ const CartItem = ({ product }) => {
     <div className="d-flex cart-item my-2">
       <div className="cart-item-img">
         <img
-          src={product.img}
+          src={product.img.secure_url}
           className=""
           alt={`Fotografía del cuadro con nombre ${product.title}`}
         />
