@@ -20,13 +20,14 @@ const AddProductForm = () => {
 
   const notify = (message) => {
     toast.success(message, {
-      position: toast.POSITION.TOP_CENTER,
+      position: "bottom-center",
+      autoClose: 1200,
     });
   };
 
   const notifyError = (message) => {
     toast.error(message, {
-      position: toast.POSITION.TOP_CENTER,
+      position: "bottom-center",
     });
   };
 
@@ -43,7 +44,7 @@ const AddProductForm = () => {
     };
     notify("Estamos agregando a tu mascota");
     const response = await addProduct(dataWithImg);
-    response.product._id
+    response.product._id !== undefined
       ? notify("Producto agregado exitosamente")
       : notifyError("Hubo un problema al agregar el producto");
 
@@ -52,8 +53,8 @@ const AddProductForm = () => {
 
   const onCrop = async () => {
     const cropper = cropperRef.current?.cropper;
-    const imageCroped = cropper.getCroppedCanvas().toDataURL();
-    await fromURL(imageCroped, 95, 0, 0, "jpeg").then((blob) => {
+    const imageCropped = cropper.getCroppedCanvas().toDataURL();
+    await fromURL(imageCropped, 95, 0, 0, "jpeg").then((blob) => {
       blobToURL(blob).then((url) => setImgCropped(url));
     });
   };
@@ -149,7 +150,7 @@ const AddProductForm = () => {
           buttonColorClass={"bg-black text-white"}
         />
       </form>
-      <ToastContainer limit={1} />
+      <ToastContainer limit={3} />
     </div>
   );
 };
