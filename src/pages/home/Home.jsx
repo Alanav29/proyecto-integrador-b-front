@@ -4,8 +4,8 @@ import Phrase from "../../components/home/Phrase";
 const Home = () => {
 	return (
 		<div>
-			<h1>Home</h1>
 			<Carrossel></Carrossel>
+            <br />
 			<Phrase></Phrase>
 		</div>
 
@@ -14,7 +14,4 @@ const Home = () => {
 
 };
 
-
-
 export default Home;
-
