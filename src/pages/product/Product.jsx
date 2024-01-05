@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import getProduct from "../../utils/products/getProduct";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../features/cartFeature";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, selectCart } from "../../features/cartFeature";
 
 const Product = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState({ img: { secure_url: "" } });
+  const cart = useSelector(selectCart);
   const dispatch = useDispatch();
 
   const productRequest = async () => {
     const data = await getProduct(productId);
     data.title ? setProduct(data) : setProduct({ title: "No disponible" });
-    console.log(data);
+  };
+
+  const searchInCart = () => {
+    const res = cart.find((product) => product._id === productId);
+    return res;
   };
 
   useEffect(() => {
@@ -31,12 +36,18 @@ const Product = () => {
         <h1>{product.title}</h1>
         <p>{product.technique}</p>
         <p>{product.price}</p>
-        <button
-          className="btn btn-warning"
-          onClick={() => dispatch(addToCart(product))}
-        >
-          Agregar al carrito
-        </button>
+        {searchInCart() === undefined ? (
+          <button
+            className="btn btn-warning"
+            onClick={() => dispatch(addToCart(product))}
+          >
+            Agregar al carrito
+          </button>
+        ) : (
+          <Link className="btn btn-success" to="/cart">
+            Ver carrito
+          </Link>
+        )}
       </div>
     </section>
   );
