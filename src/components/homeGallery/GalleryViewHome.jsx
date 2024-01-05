@@ -1,5 +1,5 @@
 import "../../styles/gallery/galleryStyle.css";
-import GalleryProduct from "../../components/gallery/GalleryProduct";
+import GalleryProduct from "../gallery/GalleryProduct";
 import { selectProducts } from "../../features/productsFeature";
 import React from 'react';
 import { useSelector } from 'react-redux';
