@@ -1,11 +1,12 @@
 import "../../styles/galleryAdmin/galleryAdmin.css";
 // import React, { useState } from "react";
 
-const ProductListItem = ({ id, img, title, price, quantity }) => {
-  const deleteProduct = async (id) => {
+const ProductListItem = ({ _id, img, title, price, quantity }) => {
+  const deleteProduct = async (_id) => {
+    console.log(_id);
     try {
       const response = await fetch(
-        "https://generation-server-trial.onrender.com/api/products/" + id,
+        "https://generation-server-trial.onrender.com/api/products/" + _id,
         { method: "DELETE" }
       ); // enviar peticion para eliminar
       const data = await response.json();
@@ -20,14 +21,14 @@ const ProductListItem = ({ id, img, title, price, quantity }) => {
     <article className="admin-item-container">
       <div className="admin-item-section">
         <div className="product-img">
-          <img className="" src={img} alt="" />
+          <img className="" src={img.secure_url} alt="" />
         </div>
         <div className="admin-item-description-section">
           <div className="product-description">{title}</div>
           <div className="">{quantity}</div>
           <div className="">
             <button
-              onClick={() => deleteProduct(id)}
+              onClick={() => deleteProduct(_id)}
               className="bi bi-trash-fill p-0 delete-icon bg-border-none"
             ></button>
           </div>
@@ -55,7 +56,7 @@ const ProductListItem = ({ id, img, title, price, quantity }) => {
   //         <div className="mx-4 my-1 d-flex align-items-center">{quantity}</div>
   //         <div className="mx-4 my-1 d-flex align-items-center">
   //           <button
-  //             onClick={() => deleteProduct(id)}
+  //             onClick={() => deleteProduct(_id)}
   //             className="bi bi-trash-fill p-0 delete-icon bg-border-none"
   //           ></button>
   //         </div>

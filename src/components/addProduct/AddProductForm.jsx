@@ -42,9 +42,9 @@ const AddProductForm = () => {
       technique: data.technique,
       img: imgCropped,
     };
-    notify("Estamos agregando a tu mascota");
+    notify("Estamos agregando tu producto");
     const response = await addProduct(dataWithImg);
-    response.product._id !== undefined
+    response.product
       ? notify("Producto agregado exitosamente")
       : notifyError("Hubo un problema al agregar el producto");
 

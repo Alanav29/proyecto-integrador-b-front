@@ -41,7 +41,7 @@ function GalleryAdmin() {
       </div>
       {productsArray.map((product, index) => (
         <ProductListItem // se muestran los productos en el componente,ProductListItem
-          id={product._id}
+          _id={product._id}
           title={product.title}
           img={product.img}
           price={product.price}
