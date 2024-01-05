@@ -11,13 +11,27 @@ export default class Carrossel extends React.Component {
             <section>
                 < Swiper
                     modules={[Navigation, Pagination, Autoplay]}
-                    autoplay={{ delay: 5000 }}
+                    autoplay={{ delay: 3000 }}
                     navigation={true}
                     loop={true}
                     pagination={{ clickable: true }}
-                    slidesPerView="2"
+                    slidesPerView="3"
                     direction='horizontal'
                     reverseDirection={true}
+                    breakpoints={{
+                        51: {
+                            slidesPerView: 1
+                        },
+                        320: {
+                            slidesPerView: 1
+                        },
+                        480: {
+                            slidesPerView: 2
+                        },
+                        640: {
+                            slidesPerView: 3
+                        },
+                    }}
                     className="swiper-container">
                     <SwiperSlide className="slide-item">
                         < img src={require('../../assets/img/general/Amarillo.webp')} />

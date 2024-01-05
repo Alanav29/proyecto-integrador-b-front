@@ -5,7 +5,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import GeneralButton from "../general/buttons/GeneralButton";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 // Asegúrate de usar la ruta corrcta
 
@@ -18,7 +18,8 @@ const GalleryViewHome = () => {
 
   // Usar slice para mostrar solo un número específico de imágenes
   const limitedProducts = products.slice(0, numberOfImagesToShow);
-  return (<div>
+  return (
+  <div>
     <ul>
       <main id="gallery" className="container-fluid">
         <h1 className="mx-3 fs-2">Movimiento, Expresion y Arte</h1>

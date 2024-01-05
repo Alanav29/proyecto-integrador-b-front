@@ -1,0 +1,19 @@
+  
+  @media (max-width: 768px) {
+    .container-name {
+        font-size: 30px;
+    }
+    .container {
+        font-size: 16px; /* Tamaño más pequeño para pantallas estrechas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container-name {
+        font-size: 26px;
+    }
+    .container {
+        font-size: 12px; /* Tamaño aún más pequeño para pantallas muy estrechas */
+    }
+  }
+  
