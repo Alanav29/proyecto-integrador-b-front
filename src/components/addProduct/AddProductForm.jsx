@@ -6,7 +6,7 @@ import PriceInput from "../general/inputs/PriceInput";
 import { useForm } from "react-hook-form";
 import addProduct from "../../utils/gallery/addProduct";
 import { Cropper } from "react-cropper";
-import { createRef, useState } from "react";
+import { useRef, useState } from "react";
 import "cropperjs/dist/cropper.css";
 import { blobToURL, fromURL } from "image-resize-compress";
 import { toast, ToastContainer } from "react-toastify";
@@ -14,7 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const AddProductForm = () => {
   const { handleSubmit, register, reset } = useForm();
-  const cropperRef = createRef();
+  const cropperRef = useRef();
   const [imgURL, setImgURL] = useState();
   const [imgCropped, setImgCropped] = useState();
 
@@ -32,30 +32,28 @@ const AddProductForm = () => {
   };
 
   const postProduct = async (data) => {
-    onCrop();
-    const dataWithImg = {
-      title: data.title,
-      width: data.width,
-      height: data.height,
-      color: data.color,
-      price: data.price,
-      technique: data.technique,
-      img: imgCropped,
-    };
-    notify("Estamos agregando tu producto");
-    const response = await addProduct(dataWithImg);
-    response.product
-      ? notify("Producto agregado exitosamente")
-      : notifyError("Hubo un problema al agregar el producto");
-
-    reset();
-  };
-
-  const onCrop = async () => {
     const cropper = cropperRef.current?.cropper;
     const imageCropped = cropper.getCroppedCanvas().toDataURL();
     await fromURL(imageCropped, 95, 0, 0, "jpeg").then((blob) => {
-      blobToURL(blob).then((url) => setImgCropped(url));
+      blobToURL(blob).then(async (url) => {
+        const dataWithImg = {
+          title: data.title,
+          width: data.width,
+          height: data.height,
+          color: data.color,
+          price: data.price,
+          technique: data.technique,
+          img: url,
+        };
+        console.log(dataWithImg);
+        notify("Estamos agregando tu producto");
+        const response = await addProduct(dataWithImg);
+        response.product
+          ? notify("Producto agregado exitosamente")
+          : notifyError("Hubo un problema al agregar el producto");
+
+        reset();
+      });
     });
   };
 
