@@ -11,12 +11,14 @@ import "cropperjs/dist/cropper.css";
 import { blobToURL, fromURL } from "image-resize-compress";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useDispatch } from "react-redux";
+import { addChange } from "../../features/changesConter";
 
 const AddProductForm = () => {
   const { handleSubmit, register, reset } = useForm();
   const cropperRef = useRef();
-  const [imgURL, setImgURL] = useState();
-  const [imgCropped, setImgCropped] = useState();
+  const [imgURL, setImgURL] = useState("");
+  const dispatch = useDispatch();
 
   const notify = (message) => {
     toast.success(message, {
@@ -48,9 +50,14 @@ const AddProductForm = () => {
         console.log(dataWithImg);
         notify("Estamos agregando tu producto");
         const response = await addProduct(dataWithImg);
-        response.product
-          ? notify("Producto agregado exitosamente")
-          : notifyError("Hubo un problema al agregar el producto");
+        if (response.product) {
+          notify("Producto agregado exitosamente");
+          dispatch(addChange(1));
+          setImgURL("  ");
+          cropper.reset();
+        } else {
+          notifyError("Hubo un problema al agregar el producto");
+        }
 
         reset();
       });
@@ -60,24 +67,25 @@ const AddProductForm = () => {
   return (
     <div>
       <h1 className="mb-3">Agregar Producto</h1>
-      <div className="">
-        <Cropper
-          ref={cropperRef}
-          scale={1}
-          src={imgURL}
-          cropBoxResizable={true}
-          viewMode={2}
-          minCropBoxHeight={50}
-          background={false}
-          autoCropArea={1}
-          checkOrientation={false}
-          guides={true}
-        />
-      </div>
+
       <form
         className="w-auto pb-5 pb-md-0"
         onSubmit={handleSubmit(postProduct)}
       >
+        <div className="">
+          <Cropper
+            ref={cropperRef}
+            scale={1}
+            src={imgURL}
+            cropBoxResizable={true}
+            viewMode={2}
+            minCropBoxHeight={50}
+            background={false}
+            autoCropArea={1}
+            checkOrientation={false}
+            guides={true}
+          />
+        </div>
         <label className="form-label" htmlFor="petImgInput">
           Imagen cuadro
         </label>
