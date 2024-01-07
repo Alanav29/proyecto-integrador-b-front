@@ -1,6 +1,6 @@
 // import { showPassword } from "show-password";
 import "../../../styles/general/inputs/TextInput.css";
-import { useState, useEffect } from "react";
+import { useState, /* useEffect */ } from "react";
 
 const PasswordInput = ({
   placeholderText,
