@@ -6,13 +6,9 @@ import PasswordInput from "../general/inputs/PasswordInput";
 import PhoneInput from "../general/inputs/PhoneInput";
 import { useForm } from "react-hook-form";
 import createUser from "../../utils/signUp/addUser";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
-
-
 
 const SignUpForm = () => {
   
@@ -42,7 +38,7 @@ const SignUpForm = () => {
   };
   const { handleSubmit, register, reset } = useForm();
   const [passwordAlert, setPasswordAlert] = useState("d-none");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const onSubmit = async (data) => {
     if (data.password !== data["confirm-password"]) {
       setPasswordAlert("d-block");
