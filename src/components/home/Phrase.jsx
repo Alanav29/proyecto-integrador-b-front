@@ -1,6 +1,6 @@
-import GeneralButton from '../general/buttons/GeneralButton';
-import { Link } from 'react-router-dom';
-
+import GeneralButton from "../general/buttons/GeneralButton";
+import { Link } from "react-router-dom";
+import "../../styles/home/phrase.css";
 
 const Phrase = () => {
 

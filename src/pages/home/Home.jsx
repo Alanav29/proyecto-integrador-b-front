@@ -1,4 +1,4 @@
-import Carrossel from "../../components/carrossel/Carrossel";
+import Carousel from "../../components/carousel/Carousel";
 import Phrase from "../../components/home/Phrase";
 import GalleryViewHome from "../../components/homeGallery/GalleryViewHome";
  import Banner from "../../components/homeGallery/Banner";

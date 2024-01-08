@@ -7,6 +7,7 @@ import "../../styles/cart/cart.css";
 const Cart = () => {
   const cart = useSelector(selectCart);
   const [cartItems, setCartItems] = useState("Tu carrito se encuentra vacío");
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const createCartCards = (items) => {
     const itemCards = items.map((item) => (
@@ -15,22 +16,33 @@ const Cart = () => {
     return itemCards;
   };
 
+  const calculateTotalPrice = (cart) => {
+    let pricesSum = 0;
+    for (let i = 0; i < cart.length; i++) {
+      pricesSum += cart[i].price;
+    }
+    setTotalPrice(pricesSum);
+  };
+
   useEffect(() => {
     if (cart.length > 0) {
       setCartItems(createCartCards(cart));
+      console.log(cart);
+      calculateTotalPrice(cart);
     } else {
       setCartItems("Tu carrito se encuentra vacío");
     }
   }, [cart]);
 
   return (
-    <main className="d-flex justify-content-center">
+    <main className="d-flex justify-content-center align-items-center flex-column">
       <div
         id="cart-items-container"
         className="d-flex flex-column justify-content-center align-items-center p-2"
       >
         {cartItems}
       </div>
+      {cart.length > 0 ? <div>{totalPrice}</div> : <></>}
     </main>
   );
 };

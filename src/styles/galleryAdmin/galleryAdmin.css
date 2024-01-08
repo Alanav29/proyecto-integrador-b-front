@@ -1,4 +1,4 @@
-.admin-item-container {
+/* .admin-item-container {
   display: flex;
   justify-content: space-between;
   margin: 20px;
@@ -92,5 +92,15 @@ p {
   }
   .product-properties {
     display: none;
+  }
+} */
+
+#gallery-admin-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #gallery-admin-container {
+    width: 650px;
   }
 }

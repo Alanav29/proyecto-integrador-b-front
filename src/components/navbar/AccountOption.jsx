@@ -9,7 +9,7 @@ const AccountOption = () => {
   return (
     <li className="nav-item dropdown">
       <p
-        className="nav-link dropdown-toggle"
+        className="nav-link dropdown-toggle mb-0"
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
