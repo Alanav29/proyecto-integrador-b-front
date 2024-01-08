@@ -12,7 +12,7 @@ const NameInput = ({
   const [fillState, setFillState] = useState(true);
   const [alertMessage, setAlertMessage] = useState("");
 
-  const showAlerMessage = (e) => {
+  const showAlertMessage = (e) => {
     if (e.target.value !== "" || isRequired === false) {
       setFillState(true);
     } else {
@@ -33,7 +33,7 @@ const NameInput = ({
         required={isRequired}
         onChange={(e) => {
           e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, "");
-          showAlerMessage(e);
+          showAlertMessage(e);
         }}
         {...register(nameText)}
       />

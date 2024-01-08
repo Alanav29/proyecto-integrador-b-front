@@ -14,6 +14,7 @@ import { selectUser } from "../features/userFeature";
 import LogIn from "../pages/logIn/LogIn";
 import Cart from "../pages/cart/Cart";
 import Product from "../pages/product/Product";
+import EditProduct from "../pages/editProduct/EditProduct";
 
 const RouterIndex = () => {
   const user = useSelector(selectUser);
@@ -31,6 +32,7 @@ const RouterIndex = () => {
         <Route path="/logIn" element={<LogIn />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product/:productId" element={<Product />} />
+        <Route path="/editProduct/:productId" element={<EditProduct />} />
         {user.isAdmin ? (
           <Route path="/galleryAdmin" element={<GalleryAdmin />} />
         ) : (
