@@ -7,6 +7,7 @@ function GalleryAdmin() {
 
   return (
     <main className="d-flex justify-content-center align-items-center flex-column">
+      <h3 className="mt-3">Catalogo de productos</h3>
       <div
         id="gallery-admin-container"
         className="d-flex flex-column justify-content-center align-items-center p-2"
