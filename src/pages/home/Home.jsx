@@ -6,7 +6,7 @@ import GalleryViewHome from "../../components/homeGallery/GalleryViewHome";
 const Home = () => {
 	return (
 		<div>
-			<Carrossel></Carrossel>
+			<Carousel></Carousel>
 			<br />
 			<Phrase></Phrase>
 			<br />
