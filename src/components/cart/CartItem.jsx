@@ -20,13 +20,13 @@ const CartItem = ({ product }) => {
       </div>
       <div className="d-flex flex-wrap flex-row mx-3 py-2 align-items-center justify-content-between cart-item-body">
         <div className="fs-5 overflow-hidden">
-          <p className="fw-bold">{product.title}</p>
-          <p className="fs-6">
+          <p className="fw-bold mb-1">{product.title}</p>
+          <p className="fs-6 mb-0">
             {product.width}X{product.height}
           </p>
         </div>
 
-        <p className="fs-5 fw-semibold me-4 text-black-50">
+        <p className="fs-5 fw-semibold me-4 text-black-50 mb-0">
           {`$ ${product.price}`}
         </p>
       </div>
