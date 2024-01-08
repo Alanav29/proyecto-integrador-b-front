@@ -6,7 +6,7 @@ const Phrase = () => {
 
 	return (
         <main>
-			<section className="mx-2 mx-sm-4">
+			<section className="mx-2 mx-sm-4" style={{ color: 'black' }}>
                 <div class="container">
 				    <h1 class="display-6 text-center">Alfonso Ferro</h1>
                 </div>
