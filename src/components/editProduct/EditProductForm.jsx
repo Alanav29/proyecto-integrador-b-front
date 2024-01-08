@@ -92,6 +92,7 @@ const EditProductForm = () => {
         } else {
           notifyError("Hubo un problema al actualizar el producto");
         }
+        reset();
       });
     });
   };
