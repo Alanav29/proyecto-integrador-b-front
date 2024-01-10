@@ -32,9 +32,11 @@ const RouterIndex = () => {
         <Route path="/logIn" element={<LogIn />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product/:productId" element={<Product />} />
-        <Route path="/editProduct/:productId" element={<EditProduct />} />
         {user.isAdmin ? (
-          <Route path="/galleryAdmin" element={<GalleryAdmin />} />
+          <>
+            <Route path="/editProduct/:productId" element={<EditProduct />} />
+            <Route path="/galleryAdmin" element={<GalleryAdmin />} />
+          </>
         ) : (
           <></>
         )}
