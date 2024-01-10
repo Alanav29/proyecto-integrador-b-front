@@ -10,13 +10,13 @@ const Footer = () => {
   return (
     <footer>
         <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61555215133199" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/ferr.oalfonso?igsh=MTM5MzY0NTZ4OHdhMg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.pinterest.com.mx/ferroecomerce/_created/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faPinterest} />
             </a>
             <Link to="/contact"><FontAwesomeIcon icon={faEnvelope} /></Link>
