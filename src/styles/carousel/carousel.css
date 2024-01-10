@@ -31,16 +31,12 @@
   width: 100%;
   height: 100%;
 }
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 480px) {
-  .swiper-slide img {
-    max-width: 80%; /* Ajusta esto según tus necesidades */
-    height: 80%;
+@media screen and (max-width: 666px) {
+  .slide-item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 }
-@media (max-width: 320px) {
-  .swiper-slide img {
-    max-width: 70%; /* Ajusta esto según tus necesidades */
-    height: 70%;
-  }
-}
+
