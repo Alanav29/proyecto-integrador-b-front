@@ -15,6 +15,7 @@ import LogIn from "../pages/logIn/LogIn";
 import Cart from "../pages/cart/Cart";
 import Product from "../pages/product/Product";
 import EditProduct from "../pages/editProduct/EditProduct";
+import Footer from "../components/footer/Footer";
 
 const RouterIndex = () => {
   const user = useSelector(selectUser);
@@ -42,6 +43,7 @@ const RouterIndex = () => {
         )}
       </Routes>
       <NavbarMobile />
+      <Footer />
     </>
   );
 };
