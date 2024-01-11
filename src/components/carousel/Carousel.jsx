@@ -51,7 +51,9 @@ const Carousel = () => {
           <img src={require("../../assets/img/general/cuadro1Gaby.jpg")} />
         </SwiperSlide>
       </Swiper>
+      <br />
     </section>
+    
   );
 };
 

@@ -1,3 +1,5 @@
+// Banner.js
+
 import "../../styles/homePageBanner/Banner.css";
 
 const Banner = () => {
@@ -10,9 +12,16 @@ const Banner = () => {
             alt="Snow"
             style={{ width: "100%" }}
           />
-          {/* <div className="over-top-left " style={{ color: "black" }}>
-            FERRO
-          </div> */}
+        </div>
+      </div>
+
+      <div className="d-md-none">
+        <div className="container-fluid mb-4">
+          <img
+            src={require("../../assets/img/general/BannerPhone.jpg")}
+            alt="Snow"
+            style={{ width: "100%" }}
+          />
         </div>
       </div>
     </section>
