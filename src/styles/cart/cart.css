@@ -7,3 +7,14 @@
     width: 650px;
   }
 }
+.pay-container{
+  background-color: black;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  border-style: groove;
+}
+.total-container{
+  font-size: 1.5rem;
+  margin-left: 22%;
+}

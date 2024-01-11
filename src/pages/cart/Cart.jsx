@@ -7,7 +7,7 @@ import EmptyCart from "../../components/cart/EmptyCart";
 
 const Cart = () => {
   const cart = useSelector(selectCart);
-  const [cartItems, setCartItems] = useState(<EmptyCart/>);
+  const [cartItems, setCartItems] = useState(<EmptyCart />);
   const [totalPrice, setTotalPrice] = useState(0);
 
   const createCartCards = (items) => {
@@ -30,20 +30,39 @@ const Cart = () => {
       setCartItems(createCartCards(cart));
       console.log(cart);
       calculateTotalPrice(cart);
+      console.log(cart);
+      calculateTotalPrice(cart);
     } else {
-      setCartItems(<EmptyCart/>);
+      setCartItems(<EmptyCart />);
     }
   }, [cart]);
 
+  const formattedTotalPrice = totalPrice.toLocaleString("es-MX", {
+    style: "currency",
+    currency: "MXN",
+    decimalSeparator: ".",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
   return (
-    <main className="d-flex justify-content-center align-items-center flex-column">
+    <main className="d-flex justify-content-center align-items-center flex-column align-items-center flex-column">
       <div
         id="cart-items-container"
         className="d-flex flex-column justify-content-center align-items-center p-2"
       >
         {cartItems}
       </div>
-      {cart.length > 0 ? <div>{totalPrice}</div> : <></>}
+      {cart.length > 0 ? (
+        <>
+          <div className="total-container d-flex justify-content-end mt-3">
+            Total: {formattedTotalPrice}
+          </div>
+          <div className="pay-container p-3 my-4">Proceder al pago</div>
+        </>
+      ) : (
+        <></>
+      )}
     </main>
   );
 };
