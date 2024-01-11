@@ -14,13 +14,13 @@ const AdminMenu = () => {
   return (
     <ul className="p-0">
       <Link className="dropdown-item" aria-current="page" to="/galleryAdmin">
-        ADMINSTRACION DE PRODUCTOS
+        ADMINSTRACIÓN DE PRODUCTOS
       </Link>
-      <Link className="dropdown-item" aria-current="page" to="/">
-        MI PERFIL
+      <Link className="dropdown-item" aria-current="page" to="/addProduct">
+        Agregar Productos
       </Link>
       <button className="dropdown-item" onClick={closeSession}>
-        CERRAR SESION
+        CERRAR SESIÓN
       </button>
     </ul>
   );

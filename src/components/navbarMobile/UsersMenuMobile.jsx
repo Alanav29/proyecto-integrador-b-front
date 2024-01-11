@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { setUser } from "../../features/userFeature";
 
 const UsersMenuMobile = ({ setSecondaryMenu }) => {
@@ -14,13 +14,6 @@ const UsersMenuMobile = ({ setSecondaryMenu }) => {
   };
   return (
     <>
-      <Link
-        className=""
-        to="/galleryAdmin"
-        onClick={() => setSecondaryMenu("d-none")}
-      >
-        MI PERFIL
-      </Link>
       <div className="text-danger" onClick={closeSession}>
         CERRAR SESION
       </div>
