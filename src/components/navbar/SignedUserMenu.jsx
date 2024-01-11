@@ -13,7 +13,7 @@ const SignedUserMenu = () => {
   };
   return (
     <ul className="p-0">
-      <button className="dropdown-item" onClick={closeSession}>
+      <button className="dropdown-item text-danger" onClick={closeSession}>
         CERRAR SESIÓN
       </button>
     </ul>
