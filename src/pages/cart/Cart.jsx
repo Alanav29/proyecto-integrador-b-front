@@ -30,8 +30,6 @@ const Cart = () => {
       setCartItems(createCartCards(cart));
       console.log(cart);
       calculateTotalPrice(cart);
-      console.log(cart);
-      calculateTotalPrice(cart);
     } else {
       setCartItems(<EmptyCart />);
     }
@@ -55,8 +53,8 @@ const Cart = () => {
       </div>
       {cart.length > 0 ? (
         <>
-          <div className="total-container d-flex justify-content-end mt-3">
-            Total: {formattedTotalPrice}
+          <div className="total-container d-flex justify-content-center mx-0 mt-3">
+            Total: {formattedTotalPrice} MXN
           </div>
           <div className="pay-container p-3 my-4">Proceder al pago</div>
         </>

@@ -28,14 +28,16 @@ const RouterIndex = () => {
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/logIn" element={<LogIn />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product/:productId" element={<Product />} />
-        <Route path="/editProduct/:productId" element={<EditProduct />} />
         {user.isAdmin ? (
-          <Route path="/galleryAdmin" element={<GalleryAdmin />} />
+          <>
+            <Route path="/editProduct/:productId" element={<EditProduct />} />
+            <Route path="/addProduct" element={<AddProduct />} />
+            <Route path="/galleryAdmin" element={<GalleryAdmin />} />
+          </>
         ) : (
           <></>
         )}

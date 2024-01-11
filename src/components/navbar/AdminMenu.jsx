@@ -19,7 +19,7 @@ const AdminMenu = () => {
       <Link className="dropdown-item" aria-current="page" to="/addProduct">
         AGREGAR PRODUCTO
       </Link>
-      <button className="dropdown-item" onClick={closeSession}>
+      <button className="dropdown-item text-danger" onClick={closeSession}>
         CERRAR SESIÓN
       </button>
     </ul>
