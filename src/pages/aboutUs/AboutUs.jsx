@@ -24,7 +24,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="col d-flex align-items-center">
-            <img className="img-fluid" src={FerroSign} alt="" />
+            <img className="img-fluid" src={FerroSign} alt="Logo" />
           </div>
         </article>
       </section>

@@ -23,3 +23,9 @@
 #logo-header-mobile {
   height: 48px;
 }
+
+.navbar-brand img {
+  height: 100%;
+  width:auto;
+  max-height: 40px;
+}
