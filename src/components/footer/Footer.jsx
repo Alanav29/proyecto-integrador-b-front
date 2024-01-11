@@ -8,7 +8,7 @@ import '../../styles/footer/footer.css';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="pb-5">
         <div className="social-icons">
             <a href="https://www.facebook.com/profile.php?id=61555215133199" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} />
@@ -21,7 +21,7 @@ const Footer = () => {
             </a>
             <Link to="/contact"><FontAwesomeIcon icon={faEnvelope} /></Link>
         </div>
-        <p>&copy; {new Date().getFullYear()} Ferro | HTaMaLeros</p>
+        <p className="pb-3">&copy; {new Date().getFullYear()} Ferro | HTaMaLeros</p>
     </footer>
   );
 };
