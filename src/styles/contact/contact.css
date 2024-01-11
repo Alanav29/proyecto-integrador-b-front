@@ -1,21 +1,24 @@
-#contact-page{
-    min-height: calc(100vh - 48px);
-    background-image: url(../../assets/img/general/cuadro1Gaby.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    filter: grayscale(0.1);
+#contact-page {
+  min-height: calc(100vh - 48px);
+  background-image: url(../../assets/img/general/cuadro1Gaby.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: grayscale(0.1);
 }
-#contact-form-container{
-    width: 500px;
-    height: auto;
-    border: 3px solid black;
-    border-bottom: none;
-    border-radius: 1rem 1rem 0px 0px;
+#contact-form-container {
+  width: 500px;
+  min-width: 230px;
+  height: auto;
+  border: 3px solid black;
+  border-bottom: none;
+  border-radius: 1rem 1rem 0px 0px;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 .exito {
-    color: green;
-  }
+  color: green;
+}
 .error {
-    color: red;
-  }
+  color: red;
+}
