@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 import "../../styles/galleryAdmin/productListItem.css";
 
 import deleteProduct from "../../utils/gallery/deleteProduct";
+import { useDispatch } from "react-redux";
+import { removeProduct } from "../../features/productsFeature";
 
 const ProductListItem = ({ product }) => {
+  const dispatch = useDispatch();
   const delItem = () => {
     deleteProduct(product._id);
+    dispatch(removeProduct(product._id));
   };
 
   return (

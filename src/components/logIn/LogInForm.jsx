@@ -35,19 +35,19 @@ const LoginForm = () => {
   return (
     <>
       <h1 className="mb-3 text-center">Bienvenido a Ferro</h1>
-      <h2 className="mb-3 text-center">Ingresa con</h2>
-      {/* Logos de Google y Facebook */}
+      {/* <h2 className="mb-3 text-center">Ingresa con</h2>
+      
       <div className="d-flex justify-content-center mb-3">
         <div className="me-3">
           <FaGoogle size={80} color="green" />{" "}
-          {/* Ajusta el tamaño según tus preferencias */}
+          
         </div>
         <div className="ms-5">
           <FaFacebook size={80} color="blue" />{" "}
-          {/* Ajusta el tamaño según tus preferencias */}
+          
         </div>
       </div>
-      <h4 className="mb-1 text-center">ó</h4>
+      <h4 className="mb-1 text-center">ó</h4> */}
       <form
         className="w-auto h-auto pb-md-0 d-flex flex-column"
         onSubmit={handleSubmit(getUserData)}
@@ -56,7 +56,7 @@ const LoginForm = () => {
           register={register}
           placeholderText={"alan@mail.com"}
           isRequired={true}
-          labelText={"email"}
+          labelText={"Email"}
           id={"login-form-email"}
           nameText={"email"}
         />
@@ -78,7 +78,7 @@ const LoginForm = () => {
           buttonColorClass={"bg-primary text-white my-2 mt-2 btn-block"}
         />
       </form>
-      <div className="d-flex flex-column align-items-center justify-content-center pb-5">
+      {/* <div className="d-flex flex-column align-items-center justify-content-center pb-5">
         <ToRegisterButton
           buttonTextp1={`¿No tienes una cuenta?`}
           buttonTextp2={`¡Registrate! Es gratis`}
@@ -88,7 +88,7 @@ const LoginForm = () => {
           buttonText={"¿Olvidaste tu contraseña?"}
           buttonColorClass={"bg-light text-black my-2 btn-block"}
         />
-      </div>
+      </div> */}
     </>
   );
 };

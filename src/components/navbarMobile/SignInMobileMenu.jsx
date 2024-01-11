@@ -3,7 +3,7 @@ const SignInMobileMenu = ({ setSecondaryMenu }) => {
   return (
     <>
       <Link className="" to="/logIn" onClick={() => setSecondaryMenu("d-none")}>
-        INICIAR SESION
+        INICIAR SESIÓN
       </Link>
       <Link
         className=""

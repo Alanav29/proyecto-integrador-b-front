@@ -5,7 +5,7 @@ import "../../styles/logIn/logIn.css";
 const LogIn = () => {
   return (
     <div className="d-flex pt-4 justify-content-center" id="contact-page">
-      <section id="contact-form-container" className="p-4 bg-white mx-3">
+      <section id="contact-form-container" className="p-4 bg-white">
         <LoginForm />
       </section>
     </div>

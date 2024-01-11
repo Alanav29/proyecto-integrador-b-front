@@ -6,8 +6,8 @@ function GalleryAdmin() {
   const products = useSelector(selectProducts);
 
   return (
-    <main className="d-flex justify-content-center align-items-center flex-column">
-      <h3 className="mt-3">Catalogo de productos</h3>
+    <main className="mb-5 mt-2 d-flex justify-content-center align-items-center flex-column">
+      <h1 className="mt-3 ">Catálogo de productos</h1>
       <div
         id="gallery-admin-container"
         className="d-flex flex-column justify-content-center align-items-center p-2"

@@ -8,6 +8,13 @@ const CartItem = ({ product }) => {
   const delItem = () => {
     dispatch(removeCartItem(product._id));
   };
+  const formattedPrice = product.price.toLocaleString("es-MX", {
+    style: "currency",
+    currency: "MXN",
+    decimalSeparator: ".",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 
   return (
     <div className="d-flex cart-item my-2">
@@ -27,7 +34,7 @@ const CartItem = ({ product }) => {
         </div>
 
         <p className="fs-5 fw-semibold me-4 text-black-50 mb-0">
-          {`$ ${product.price}`}
+          {`${formattedPrice}`}
         </p>
       </div>
       <button onClick={delItem} className="fs-5 mx-3 my-auto delete-item-btn">

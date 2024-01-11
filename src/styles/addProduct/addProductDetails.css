@@ -42,7 +42,7 @@
 }
 
 
-.text-container li  {
+.text-container p  {
   font-size: 20px; /* Ajusta este valor a tus necesidades */
 }
 
@@ -76,11 +76,11 @@ strong {
 }
 
 /* Cuando la pantalla tiene 600px o menos */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .container-padre {
     flex-direction: column;
     padding: 10px;
     margin-bottom: 90px;
-
+    align-items: center;
   }
 }
