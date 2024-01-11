@@ -3,11 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import getProduct from "../../utils/products/getProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, selectCart } from "../../features/cartFeature";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "../../styles/addProduct/addProductDetails.css";
-
 
 const Product = () => {
   const { productId } = useParams();
@@ -31,7 +30,7 @@ const Product = () => {
       autoClose: 50,
     });
   };
-  
+
   useEffect(() => {
     productRequest();
   }, []);
@@ -69,7 +68,7 @@ const Product = () => {
     )}
   </div>
   </div>
-  <ToastContainer limit={3} />
+
 </section>
   );
 };
