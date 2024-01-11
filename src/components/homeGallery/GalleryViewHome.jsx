@@ -13,7 +13,7 @@ const GalleryViewHome = () => {
   // Usamos el selector selectProducts para acceder al estado de los productos
   const products = useSelector(selectProducts);
   // Número de imágenes que quieres mostrar en la página de inicio
-  const numberOfImagesToShow = 11; // Cambia este valor según tu preferencia
+  const numberOfImagesToShow = 12; // Cambia este valor según tu preferencia
 
   // Usar slice para mostrar solo un número específico de imágenes
   const limitedProducts = products.slice(0, numberOfImagesToShow);
@@ -32,16 +32,20 @@ const GalleryViewHome = () => {
               })}
             </Masonry>
           </ResponsiveMasonry>
-          <section style={{ textAlign: "center" }}>
-            <Link to={"/gallery"}>
-              <GeneralButton
-                buttonText={"Sigue viendo"}
-                buttonColorClass={"bg-black text-white"}
-              />
-            </Link>
-          </section>
+          {/* Elemento para el efecto de difuminado */}
+          <div className="gallery-fade"></div>
         </section>
       </div>
+      <section style={{ textAlign: "center" }}>
+        <Link to={"/gallery"}>
+          <GeneralButton
+            buttonText={"Sigue viendo"}
+            buttonColorClass={"bg-black text-white"}
+          />
+        </Link>
+      </section>
+      <br />
+      <br />
     </>
   );
 };
