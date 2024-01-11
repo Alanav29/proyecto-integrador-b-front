@@ -2,9 +2,9 @@ import "../../styles/aboutUs/cardTeamStyle.css";
 import "../../styles/aboutUs/aboutUs.css";
 import membersArray from "../../utils/aboutUs/membersInfo";
 import CardTeamMember from "../../components/aboutUs/CardTeamMember";
-import cuadroNosotros from "../../assets/img/general/cuadro1Gaby.jpg";
+// import cuadroNosotros from "../../assets/img/general/cuadro1Gaby.jpg";
 import teamLogoImg from "../../assets/img/general/htamalerosLogoSinFondo.png";
-
+import FerroSign from "../../assets/img/logo/firmaFerro.png"
 const AboutUs = () => {
   return (
     <main id="about-us-container">
@@ -24,7 +24,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="col d-flex align-items-center">
-            <img className="img-fluid" src={cuadroNosotros} alt="" />
+            <img className="img-fluid" src={FerroSign} alt="" />
           </div>
         </article>
       </section>

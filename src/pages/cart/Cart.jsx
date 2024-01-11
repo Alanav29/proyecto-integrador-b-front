@@ -3,10 +3,11 @@ import { selectCart } from "../../features/cartFeature";
 import { useEffect, useState } from "react";
 import CartItem from "../../components/cart/CartItem";
 import "../../styles/cart/cart.css";
+import EmptyCart from "../../components/cart/EmptyCart";
 
 const Cart = () => {
   const cart = useSelector(selectCart);
-  const [cartItems, setCartItems] = useState("Tu carrito se encuentra vacío");
+  const [cartItems, setCartItems] = useState(<EmptyCart/>);
   const [totalPrice, setTotalPrice] = useState(0);
 
   const createCartCards = (items) => {
@@ -30,7 +31,7 @@ const Cart = () => {
       console.log(cart);
       calculateTotalPrice(cart);
     } else {
-      setCartItems("Tu carrito se encuentra vacío");
+      setCartItems(<EmptyCart/>);
     }
   }, [cart]);
 

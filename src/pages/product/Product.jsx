@@ -37,8 +37,8 @@ const Product = () => {
   }, []);
 
   return (
-<section className="container-fluid d-flex flex-column flex-md-row">
-<div className="container-padre">
+<section className="my-5 justify-content-center container-fluid d-flex flex-column flex-md-row">
+<div className="container-padre m-0">
   <div className="img-container fade-in col-12 col-md-6">
     <img
       src={product.img.secure_url}
@@ -47,10 +47,10 @@ const Product = () => {
   </div>
   <div className="text-container col-12 col-md-6">
     <h1>{product.title}</h1>
-    <ul>
-    <li><p>Técnica: {product.technique}</p></li>
-    <li><p>Medidas: {product.height} x {product.width} cm</p></li>
-</ul>
+
+    <p>Técnica: {product.technique}</p>
+    <p>Medidas: {product.height} x {product.width} cm</p>
+
     <strong> ${product.price}.00MXN</strong><br/><br />
     {searchInCart() === undefined ? (
       <button
