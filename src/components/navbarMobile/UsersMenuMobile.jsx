@@ -15,7 +15,7 @@ const UsersMenuMobile = ({ setSecondaryMenu }) => {
   return (
     <>
       <div className="text-danger" onClick={closeSession}>
-        CERRAR SESION
+        CERRAR SESIÓN
       </div>
     </>
   );
