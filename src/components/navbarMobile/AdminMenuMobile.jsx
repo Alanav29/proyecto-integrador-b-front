@@ -20,13 +20,17 @@ const AdminMenuMobile = ({ setSecondaryMenu }) => {
         to="/galleryAdmin"
         onClick={() => setSecondaryMenu("d-none")}
       >
-        ADMINSTRACION DE PRODUCTOS
+        ADMINISTRACIÓN DE PRODUCTOS
       </Link>
-      <Link className="" to="/" onClick={() => setSecondaryMenu("d-none")}>
-        MI PERFIL
+      <Link
+        className=""
+        to="/addProduct"
+        onClick={() => setSecondaryMenu("d-none")}
+      >
+        AGREGAR PRODUCTOS
       </Link>
       <div className="text-danger" onClick={closeSession}>
-        CERRAR SESION
+        CERRAR SESIÓN
       </div>
     </>
   );

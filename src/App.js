@@ -7,6 +7,7 @@ import getProducts from "./utils/gallery/getProducts.js";
 import getUserLS from "./utils/localStorage/getUserLS.js";
 import { setUser } from "./features/userFeature.js";
 import { selectChangesCounter } from "./features/changesConter.js";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ function App() {
   return (
     <BrowserRouter>
       <RouterIndex />
+      <ToastContainer />
     </BrowserRouter>
   );
 }

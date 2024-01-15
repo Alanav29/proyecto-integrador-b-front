@@ -28,7 +28,7 @@ const Gallery = () => {
 
   return (
     <main id="gallery" className="container-fluid">
-      <h1 className="mx-3 fs-2">Galería</h1>
+      {/* <h1 className="mx-3 fs-2">Galería</h1> */}
       {message && <div className={`alert alert-warning text-center ${fadeOut ? 'fade-out' : ''}`} role="alert">{message}</div>}
       <section className="mx-2 mx-sm-4">
         <ResponsiveMasonry

@@ -8,7 +8,7 @@ import { Cropper } from "react-cropper";
 import { useEffect, useRef, useState } from "react";
 import "cropperjs/dist/cropper.css";
 import { blobToURL, fromURL } from "image-resize-compress";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { addChange } from "../../features/changesConter";
@@ -188,7 +188,6 @@ const EditProductForm = () => {
           buttonColorClass={"bg-black text-white"}
         />
       </form>
-      <ToastContainer limit={3} />
     </div>
   );
 };

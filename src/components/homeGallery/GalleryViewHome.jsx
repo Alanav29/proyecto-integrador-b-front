@@ -33,16 +33,20 @@ const GalleryViewHome = () => {
               })}
             </Masonry>
           </ResponsiveMasonry>
-          <section style={{ textAlign: "center" }}>
-            <Link to={"/gallery"}>
-              <GeneralButton
-                buttonText={"Sigue viendo"}
-                buttonColorClass={"bg-black text-white"}
-              />
-            </Link>
-          </section>
+          {/* Elemento para el efecto de difuminado */}
+          <div className="gallery-fade"></div>
         </section>
       </div>
+      <section style={{ textAlign: "center" }}>
+        <Link to={"/gallery"}>
+          <GeneralButton
+            buttonText={"Sigue viendo"}
+            buttonColorClass={"bg-black text-white"}
+          />
+        </Link>
+      </section>
+      <br />
+      <br />
     </>
   );
 };

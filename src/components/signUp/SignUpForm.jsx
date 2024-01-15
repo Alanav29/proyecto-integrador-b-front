@@ -7,34 +7,33 @@ import PhoneInput from "../general/inputs/PhoneInput";
 import { useForm } from "react-hook-form";
 import createUser from "../../utils/signUp/addUser";
 // import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUpForm = () => {
-  
-  const notifySuccess = ()=> {
-      toast.success("¡Su registro se ha completado con éxito!", { 
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          });
+  const notifySuccess = () => {
+    toast.success("¡Su registro se ha completado con éxito!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
-  const notifyError = (message)=>{
-     toast.error(message,  {
-    position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          });
+  const notifyError = (message) => {
+    toast.error(message, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
   const { handleSubmit, register, reset } = useForm();
   const [passwordAlert, setPasswordAlert] = useState("d-none");
@@ -51,12 +50,11 @@ const SignUpForm = () => {
         password: data.password,
       };
       console.log(data);
-    const userData = await createUser(requiredData);
-    userData.email ? notifySuccess(): notifyError(userData.message);
-    reset();  
-      
-    // navigate("/") 
-      
+      const userData = await createUser(requiredData);
+      userData.email ? notifySuccess() : notifyError(userData.message);
+      reset();
+
+      // navigate("/")
     }
   };
 
@@ -128,10 +126,8 @@ const SignUpForm = () => {
           buttonColorClass={"bg-black text-white"}
         />
       </form>
-      <ToastContainer/>
     </>
   );
 };
-
 
 export default SignUpForm;

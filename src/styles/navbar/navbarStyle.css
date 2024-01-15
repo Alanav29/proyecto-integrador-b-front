@@ -16,3 +16,9 @@
   right: 0%;
   margin-top: var(--bs-dropdown-spacer);
 }
+
+.navbar-brand img {
+  height: 100%;
+  width:auto;
+  max-height: 40px;
+}
