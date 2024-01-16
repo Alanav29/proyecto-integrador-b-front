@@ -13,7 +13,7 @@ const GalleryViewHome = () => {
   // Usamos el selector selectProducts para acceder al estado de los productos
   const products = useSelector(selectProducts);
   // Número de imágenes que quieres mostrar en la página de inicio
-  const numberOfImagesToShow = 12; // Cambia este valor según tu preferencia
+  const numberOfImagesToShow = 8; // Cambia este valor según tu preferencia
 
   // Usar slice para mostrar solo un número específico de imágenes
   const limitedProducts = products.slice(0, numberOfImagesToShow);
@@ -26,7 +26,7 @@ const GalleryViewHome = () => {
           <h1 className="display-6 text-center"><em>Movimiento, Expresion y Arte</em></h1>
         </div>
       </section>
-        <h5 className="font-weight-bold"><br/>Aquí encontrarás una colección diversa y vibrante de obras de arte del artista Alfonso Ferro.</h5><br/>
+        <h5 className="font-weight-bold"><br/>Aquí encontrarás una colección diversa y vibrante de obras de arte del artista <em>Alfonso Ferro</em>.</h5><br/>
         <section className="mx-2 mx-sm-4">
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 425: 1, 450: 2, 740: 3, 1024: 4 }}
