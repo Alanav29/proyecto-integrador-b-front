@@ -8,6 +8,12 @@ import "swiper/css/pagination";
 const Carousel = () => {
   return (
     <section>
+          <br/><h1 className="display-6 text-center" ><em>Novedades</em></h1><br />
+          <div className="container">
+          <h5 className="font-weight-bold text-center">
+          Aquí tienes un vistazo de las últimas obras de arte añadidas a la colección.
+          </h5>
+        </div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         autoplay={{ delay: 3000 }}
