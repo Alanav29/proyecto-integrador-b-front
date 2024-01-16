@@ -4,7 +4,7 @@ import { removeCartItem } from "../../features/cartFeature";
 
 const CartItem = ({ product }) => {
   const dispatch = useDispatch();
-
+    const aviso = "Productos agregados al carrito";
   const delItem = () => {
     dispatch(removeCartItem(product._id));
   };
@@ -17,8 +17,10 @@ const CartItem = ({ product }) => {
   });
 
   return (
-    <div className="d-flex cart-item my-2">
-      <div className="cart-item-img">
+    
+    <div className="d-flex cart-item my-2 scale-up-vertical-center">
+      <div className="cart-item-img ">
+        
         <img
           src={product.img.secure_url}
           className=""
@@ -33,7 +35,7 @@ const CartItem = ({ product }) => {
           </p>
         </div>
 
-        <p className="fs-5 fw-semibold me-4 text-black-50 mb-0">
+        <p className="fs-5 fw-semibold me-4 text-black-50 mb-0 ">
           {`${formattedPrice}`}
         </p>
       </div>

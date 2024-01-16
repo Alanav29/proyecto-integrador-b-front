@@ -44,7 +44,7 @@ const Product = () => {
       alt={`Fotografia del cuadro que lleva por nombre ${product.title}`}
     />
   </div>
-  <div className="text-container col-12 col-md-6">
+  <div className="text-container col-12 col-md-6 ">
     <h1>{product.title}</h1>
 
     <p>Técnica: {product.technique}</p>
@@ -53,7 +53,7 @@ const Product = () => {
     <strong> ${product.price}.00MXN</strong><br/><br />
     {searchInCart() === undefined ? (
       <button
-        className="btn btn-warning"
+        className="btn btn-dark my-3 fs-5 fade-in"
         onClick={() => {
           dispatch(addToCart(product));
           notify(product);
@@ -62,7 +62,7 @@ const Product = () => {
         Agregar al carrito
       </button>
     ) : (
-      <Link className="btn btn-success" to="/cart">
+      <Link className="btn btn-success my-3 fs-5" to="/cart">
         Ir al carrito
       </Link>
     )}

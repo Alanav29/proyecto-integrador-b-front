@@ -10,7 +10,7 @@ const GalleryProduct = ({ product: { title, img, _id } }) => {
           <div className="gallery-product-card-body pb-4">
             <h4 className="text-white">{title}</h4>
 
-            <button className="gallery-product-btn">
+            <button className="gallery-product-btn btn btn-dark">
               Detalles
               <Link
                 className="gallery-product-arrow-btn text-decoration-none"

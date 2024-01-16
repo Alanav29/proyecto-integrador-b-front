@@ -7,14 +7,51 @@
     width: 650px;
   }
 }
-.pay-container{
+.pay-container {
   background-color: black;
   color: whitesmoke;
   font-size: 1.5rem;
   border-radius: 3rem;
   border-style: groove;
 }
-.total-container{
+.total-container {
   font-size: 1.5rem;
   margin-left: 22%;
 }
+
+.scale-up-center {
+  animation: scale-up-center 0.4s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.vibrate {
+  animation: vibrate 1.5s linear infinite;
+}
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
