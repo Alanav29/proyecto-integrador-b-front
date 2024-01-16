@@ -75,13 +75,13 @@ const LoginForm = () => {
 
         <GeneralButton
           buttonText={"Ingresar"}
-          buttonColorClass={"bg-primary text-white my-2 mt-2 btn-block"}
+          buttonColorClass={"btn btn-primary text-white my-2 mt-2 btn-block"}
         />
         <div className="d-flex flex-column align-items-center justify-content-center pb-5">
         <ToRegisterButton
           buttonTextp1={`¿No tienes una cuenta?`}
           buttonTextp2={`¡Registrate! Es gratis`}
-          buttonColorClass={"bg-black text-white my-2 btn-block"}
+          buttonColorClass={ " vibrate btn btn-dark text-white my-2 btn-block"}
         />
       </div> 
       </form>
