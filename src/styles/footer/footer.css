@@ -10,11 +10,11 @@ footer {
     position: relative;
 }
 
-@media screen and (max-width: 90vh) {
+/* @media screen and (max-width: 90vh) {
     footer {
         position: fixed;
     }
-}
+} */
 
 .social-icons a {
     margin: 0 10px;
