@@ -21,7 +21,7 @@ const Phrase = () => {
         <Link to={"/AboutUs"}>
           <GeneralButton
             buttonText={"Conoce al artista"}
-            buttonColorClass={"bg-black text-white"}
+            buttonColorClass={"btn btn-dark my-4 fs-5 scale-up-center"}
           />
         </Link>
       </section>

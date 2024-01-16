@@ -46,7 +46,7 @@
 }
 
 .gallery-product-btn {
-  background: var(--second-accent-color);
+  background: rgb(45, 43, 43);
   color: white;
   padding: 0.35em;
   padding-left: 1.2em;

@@ -53,10 +53,10 @@ const Cart = () => {
       </div>
       {cart.length > 0 ? (
         <>
-          <div className="total-container d-flex justify-content-center mx-0 mt-3">
-            Total: {formattedTotalPrice} MXN
+          <div className="total-container d-flex justify-content-center mx-0 mt-3 tracking-in-contract">
+            Total: {formattedTotalPrice}MXN
           </div>
-          <div className="pay-container p-3 my-4">Proceder al pago</div>
+          <button className="btn btn-dark my-4 fs-5 scale-up-center" >Proceder al pago</button>
         </>
       ) : (
         <></>
