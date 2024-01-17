@@ -84,7 +84,7 @@ const SignUpForm = () => {
           isRequired={true}
           labelText={"Teléfono"}
           id={"sign-up-form-phone"}
-          nameText={"phoneNumber"}
+          nameText={"phone"}
         />
 
         <EmailTextInput

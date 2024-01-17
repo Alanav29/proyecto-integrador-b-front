@@ -8,7 +8,7 @@ const UsersMenu = () => {
 
   let optionToShow = <></>;
 
-  if (user.isAdmin === false && user.email) {
+  if (user.privilege.privilege === "user" && user.email) {
     optionToShow = <SignedUserMenu />;
   } else {
     optionToShow = <CommonUserMenu />;

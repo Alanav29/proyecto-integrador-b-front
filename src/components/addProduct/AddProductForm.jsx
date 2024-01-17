@@ -41,10 +41,10 @@ const AddProductForm = () => {
         const dataWithImg = {
           id: 1,
           title: data.title,
-          width: data.width,
-          height: data.height,
+          width: parseInt(data.width),
+          height: parseInt(data.height),
           color: data.color,
-          price: data.price,
+          price: parseInt(data.price),
           technique: data.technique,
           img: url,
         };

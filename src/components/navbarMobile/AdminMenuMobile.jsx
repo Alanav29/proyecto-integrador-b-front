@@ -7,7 +7,7 @@ const AdminMenuMobile = ({ setSecondaryMenu }) => {
   const navigate = useNavigate();
 
   const closeSession = () => {
-    dispatch(setUser({ isAdmin: false }));
+    dispatch(setUser({ privilege: { privilege: "user" } }));
     navigate("/");
     setSecondaryMenu("d-none");
     localStorage.removeItem("user");
