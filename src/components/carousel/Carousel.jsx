@@ -4,16 +4,22 @@ import "swiper/css";
 import "../../styles/carousel/carousel.css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
-const Carousel = () => {
+const Carousel = ({ products }) => {
   return (
     <section>
-          <br/><h1 className="display-6 text-center" ><em>Novedades</em></h1><br />
-          <div className="container">
-          <h5 className="font-weight-bold text-center">
-          Aquí tienes un vistazo de las últimas obras de arte añadidas a la colección.
-          </h5>
-        </div>
+      <br />
+      <h1 className="display-6 text-center">
+        <em>Novedades</em>
+      </h1>
+      <br />
+      <div className="container">
+        <h5 className="font-weight-bold text-center">
+          Aquí tienes un vistazo de las últimas obras de arte añadidas a la
+          colección.
+        </h5>
+      </div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         autoplay={{ delay: 3000 }}
@@ -40,26 +46,33 @@ const Carousel = () => {
         className="swiper-container"
       >
         <SwiperSlide className="slide-item">
-          <img src={require("../../assets/img/general/Amarillo.webp")} />
+          <Link to={`/product/${products[0]._id}`}>
+            <img src={products[0].img.secure_url} alt="" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <img
-            src={require("../../assets/img/general/Bocetos Abstractos.jpg")}
-          />
+          <Link to={`/product/${products[1]._id}`}>
+            <img src={products[1].img.secure_url} alt="" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <img src={require("../../assets/img/general/Elefante.webp")} />
+          <Link to={`/product/${products[2]._id}`}>
+            <img src={products[2].img.secure_url} alt="" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <img src={require("../../assets/img/general/IMG_9399.webp")} />
+          <Link to={`/product/${products[3]._id}`}>
+            <img src={products[3].img.secure_url} alt="" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <img src={require("../../assets/img/general/cuadro1Gaby.jpg")} />
+          <Link to={`/product/${products[4]._id}`}>
+            <img src={products[4].img.secure_url} alt="" />
+          </Link>
         </SwiperSlide>
       </Swiper>
       <br />
     </section>
-    
   );
 };
 
