@@ -14,7 +14,7 @@ export const cartFeature = createSlice({
     },
     removeCartItem: (state, action) => {
       const elementToRemove = state.value.findIndex(
-        (item) => item._id === action.payload
+        (item) => item.id === action.payload
       );
       state.value.splice(elementToRemove, 1);
     },

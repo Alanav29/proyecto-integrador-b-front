@@ -4,9 +4,9 @@ import { removeCartItem } from "../../features/cartFeature";
 
 const CartItem = ({ product }) => {
   const dispatch = useDispatch();
-    const aviso = "Productos agregados al carrito";
+  const aviso = "Productos agregados al carrito";
   const delItem = () => {
-    dispatch(removeCartItem(product._id));
+    dispatch(removeCartItem(product.id));
   };
   const formattedPrice = product.price.toLocaleString("es-MX", {
     style: "currency",
@@ -17,12 +17,10 @@ const CartItem = ({ product }) => {
   });
 
   return (
-    
     <div className="d-flex cart-item my-2 scale-up-vertical-center">
       <div className="cart-item-img ">
-        
         <img
-          src={product.img.secure_url}
+          src={product.img}
           className=""
           alt={`Fotografía del cuadro con nombre ${product.title}`}
         />

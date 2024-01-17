@@ -12,7 +12,7 @@ const Cart = () => {
 
   const createCartCards = (items) => {
     const itemCards = items.map((item) => (
-      <CartItem product={item} key={item._id} />
+      <CartItem product={item} key={item.id} />
     ));
     return itemCards;
   };
@@ -56,7 +56,9 @@ const Cart = () => {
           <div className="total-container d-flex justify-content-center mx-0 mt-3 tracking-in-contract">
             Total: {formattedTotalPrice}MXN
           </div>
-          <button className="btn btn-dark my-4 fs-5 scale-up-center" >Proceder al pago</button>
+          <button className="btn btn-dark my-4 fs-5 scale-up-center">
+            Proceder al pago
+          </button>
         </>
       ) : (
         <></>

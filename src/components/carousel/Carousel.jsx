@@ -46,28 +46,28 @@ const Carousel = ({ products }) => {
         className="swiper-container"
       >
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[0]._id}`}>
-            <img src={products[0].img.secure_url} alt="" />
+          <Link to={`/product/${products[0].id}`}>
+            <img src={products[0].img} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[1]._id}`}>
-            <img src={products[1].img.secure_url} alt="" />
+          <Link to={`/product/${products[1].id}`}>
+            <img src={products[1].img} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[2]._id}`}>
-            <img src={products[2].img.secure_url} alt="" />
+          <Link to={`/product/${products[2].id}`}>
+            <img src={products[2].img} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[3]._id}`}>
-            <img src={products[3].img.secure_url} alt="" />
+          <Link to={`/product/${products[3].id}`}>
+            <img src={products[3].img} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[4]._id}`}>
-            <img src={products[4].img.secure_url} alt="" />
+          <Link to={`/product/${products[4].id}`}>
+            <img src={products[4].img} alt="" />
           </Link>
         </SwiperSlide>
       </Swiper>

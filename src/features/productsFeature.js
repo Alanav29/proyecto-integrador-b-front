@@ -11,7 +11,7 @@ export const productsFeature = createSlice({
     },
     removeProduct: (state, action) => {
       const elementToRemove = state.value.findIndex(
-        (product) => product._id === action.payload
+        (product) => product.id === action.payload
       );
       state.value.splice(elementToRemove, 1);
     },

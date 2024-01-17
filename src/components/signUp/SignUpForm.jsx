@@ -43,14 +43,9 @@ const SignUpForm = () => {
       setPasswordAlert("d-block");
     } else {
       setPasswordAlert("d-none");
-      const requiredData = {
-        name: data.name + data.lastName,
-        email: data.email,
-        phoneNumber: data.phoneNumber,
-        password: data.password,
-      };
+
       console.log(data);
-      const userData = await createUser(requiredData);
+      const userData = await createUser(data);
       userData.email ? notifySuccess() : notifyError(userData.message);
       reset();
 
@@ -71,7 +66,7 @@ const SignUpForm = () => {
           isRequired={true}
           labelText={"Nombre"}
           id={"sign-up-form-name"}
-          nameText={"name"}
+          nameText={"firstName"}
         />
 
         <NameInput

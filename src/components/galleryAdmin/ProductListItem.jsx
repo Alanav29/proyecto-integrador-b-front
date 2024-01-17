@@ -10,15 +10,15 @@ import { removeProduct } from "../../features/productsFeature";
 const ProductListItem = ({ product }) => {
   const dispatch = useDispatch();
   const delItem = () => {
-    deleteProduct(product._id);
-    dispatch(removeProduct(product._id));
+    deleteProduct(product.id);
+    dispatch(removeProduct(product.id));
   };
 
   return (
     <div className="d-flex gallery-admin-item my-2">
       <div className="gallery-admin-item-img">
         <img
-          src={product.img.secure_url}
+          src={product.img}
           className=""
           alt={`Fotografía del cuadro con nombre ${product.title}`}
         />
@@ -41,7 +41,7 @@ const ProductListItem = ({ product }) => {
         </button>
         <Link
           className="fs-5 mx-3 my-auto edit-item-btn"
-          to={`/editProduct/${product._id}`}
+          to={`/editProduct/${product.id}`}
         >
           <i className="bi bi-pencil-square"></i>
         </Link>

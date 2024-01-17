@@ -20,10 +20,13 @@
   }
 } */
 
-
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .fade-out {
@@ -38,7 +41,11 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 1100px; /* Ajusta la altura para controlar el área del efecto */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  height: 300px; /* Ajusta la altura para controlar el área del efecto */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
   z-index: 10;
 }

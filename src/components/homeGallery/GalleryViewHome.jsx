@@ -19,21 +19,27 @@ const GalleryViewHome = () => {
   const limitedProducts = products.slice(0, numberOfImagesToShow);
   return (
     <>
-
       <div id="gallery" className="container-fluid">
-      <section className="mx-2 mx-sm-4" style={{ color: "black" }}>
-        <div className="container">
-          <h1 className="display-6 text-center"><em>Movimiento, Expresion y Arte</em></h1>
-        </div>
-      </section>
-        <h5 className="font-weight-bold"><br/>Aquí encontrarás una colección diversa y vibrante de obras de arte del artista <em>Alfonso Ferro</em>.</h5><br/>
+        <section className="mx-2 mx-sm-4" style={{ color: "black" }}>
+          <div className="container">
+            <h1 className="display-6 text-center">
+              <em>Movimiento, Expresion y Arte</em>
+            </h1>
+          </div>
+        </section>
+        <h5 className="font-weight-bold">
+          <br />
+          Aquí encontrarás una colección diversa y vibrante de obras de arte del
+          artista <em>Alfonso Ferro</em>.
+        </h5>
+        <br />
         <section className="mx-2 mx-sm-4">
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 425: 1, 450: 2, 740: 3, 1024: 4 }}
           >
             <Masonry>
               {limitedProducts.map((product) => {
-                return <GalleryProduct product={product} key={product._id} />;
+                return <GalleryProduct product={product} key={product.id} />;
               })}
             </Masonry>
           </ResponsiveMasonry>

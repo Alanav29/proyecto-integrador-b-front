@@ -4,11 +4,11 @@ import { useSelector } from "react-redux";
 import { selectProducts } from "../../features/productsFeature";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Gallery = () => {
-
-  const content = "¡Bienvenido a la Galería de Arte! Sumérgete en la belleza del arte y encuentra la pieza perfecta que hable a tu corazón. ¡Disfruta explorando!";
+  const content =
+    "¡Bienvenido a la Galería de Arte! Sumérgete en la belleza del arte y encuentra la pieza perfecta que hable a tu corazón. ¡Disfruta explorando!";
 
   const [message, setShowMessage] = useState(content);
   const products = useSelector(selectProducts);
@@ -29,14 +29,23 @@ const Gallery = () => {
   return (
     <main id="gallery" className="container-fluid">
       {/* <h1 className="mx-3 fs-2">Galería</h1> */}
-      {message && <div className={`alert alert-warning text-center ${fadeOut ? 'fade-out' : ''}`} role="alert">{message}</div>}
+      {message && (
+        <div
+          className={`alert alert-warning text-center ${
+            fadeOut ? "fade-out" : ""
+          }`}
+          role="alert"
+        >
+          {message}
+        </div>
+      )}
       <section className="mx-2 mx-sm-4">
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 425: 1, 450: 2, 740: 3, 1024: 4 }}
         >
           <Masonry>
             {products.map((product) => {
-              return <GalleryProduct product={product} key={product._id} />;
+              return <GalleryProduct product={product} key={product.id} />;
             })}
           </Masonry>
         </ResponsiveMasonry>

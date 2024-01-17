@@ -1,11 +1,11 @@
 import "../../styles/gallery/galleryProduct.css";
 import { Link } from "react-router-dom";
 
-const GalleryProduct = ({ product: { title, img, _id } }) => {
+const GalleryProduct = ({ product: { title, img, id } }) => {
   return (
     <article className="product-container">
       <div className="card">
-        <img src={img.secure_url} className="card-img" alt="..." />
+        <img src={img} className="card-img" alt="..." />
         <div className="card-img-overlay m-0 p-0 d-flex align-items-end">
           <div className="gallery-product-card-body pb-4">
             <h4 className="text-white">{title}</h4>
@@ -14,7 +14,7 @@ const GalleryProduct = ({ product: { title, img, _id } }) => {
               Detalles
               <Link
                 className="gallery-product-arrow-btn text-decoration-none"
-                to={`/product/${_id}`}
+                to={`/product/${id}`}
               >
                 <i className="bi bi-arrow-right-short text-dark fs-3"></i>
               </Link>
