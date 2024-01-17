@@ -6,7 +6,7 @@
   position: fixed;
   bottom: 8px;
   left: 5vw;
-  z-index: 3;
+  z-index: 12;
   border-radius: 30px;
 }
 
@@ -26,6 +26,6 @@
 
 .navbar-brand img {
   height: 100%;
-  width:auto;
+  width: auto;
   max-height: 40px;
 }

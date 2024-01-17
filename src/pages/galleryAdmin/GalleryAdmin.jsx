@@ -13,7 +13,7 @@ function GalleryAdmin() {
         className="d-flex flex-column justify-content-center align-items-center p-2"
       >
         {products.map((product) => (
-          <ProductListItem product={product} key={product._id} />
+          <ProductListItem product={product} key={product.id} />
         ))}
       </div>
     </main>

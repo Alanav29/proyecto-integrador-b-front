@@ -7,7 +7,7 @@ const AccountMenuMobile = ({ setSecondaryMenu }) => {
   const user = useSelector(selectUser);
   return (
     <>
-      {user.isAdmin ? (
+      {user.privilege.privilege === "admin" ? (
         <AdminMenuMobile setSecondaryMenu={setSecondaryMenu} />
       ) : (
         <UsersMenuMobile setSecondaryMenu={setSecondaryMenu} />

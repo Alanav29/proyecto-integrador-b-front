@@ -39,18 +39,19 @@ const AddProductForm = () => {
     await fromURL(imageCropped, 95, 0, 0, "jpeg").then((blob) => {
       blobToURL(blob).then(async (url) => {
         const dataWithImg = {
+          id: 1,
           title: data.title,
-          width: data.width,
-          height: data.height,
+          width: parseInt(data.width),
+          height: parseInt(data.height),
           color: data.color,
-          price: data.price,
+          price: parseInt(data.price),
           technique: data.technique,
           img: url,
         };
         console.log(dataWithImg);
         notify("Estamos agregando tu producto");
         const response = await addProduct(dataWithImg);
-        if (response.product) {
+        if (response.title) {
           notify("Producto agregado exitosamente");
           dispatch(addChange(1));
           setImgURL("  ");

@@ -17,7 +17,7 @@ const AccountOption = () => {
         CUENTA
       </p>
       <ul className="dropdown-menu">
-        {user.isAdmin ? <AdminMenu /> : <UsersMenu />}
+        {user.privilege.privilege === "admin" ? <AdminMenu /> : <UsersMenu />}
       </ul>
     </li>
   );

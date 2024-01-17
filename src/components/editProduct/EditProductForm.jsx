@@ -26,9 +26,9 @@ const EditProductForm = () => {
 
   const getProductInfo = async () => {
     const data = await getProduct(productId);
-    if (data._id) {
+    if (data.id) {
       setProduct(data);
-      setImgURL(data.img.secure_url);
+      setImgURL(data.img);
     } else {
       console.log("Error getting product");
     }
@@ -57,7 +57,7 @@ const EditProductForm = () => {
     await fromURL(imageCropped, 95, 0, 0, "jpeg").then((blob) => {
       blobToURL(blob).then(async (url) => {
         let dataWithImg;
-        if (imgURL === product.img.secure_url) {
+        if (imgURL === product.img) {
           dataWithImg = {
             title: data.title,
             width: data.width,
@@ -84,7 +84,7 @@ const EditProductForm = () => {
 
         const response = await updateProduct(productId, dataWithImg);
         console.log(response);
-        if (response._id) {
+        if (response.id) {
           notify("Producto actualizado exitosamente");
           dispatch(addChange(1));
           setImgURL("  ");
