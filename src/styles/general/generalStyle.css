@@ -15,3 +15,7 @@ body {
 .accent-color {
   color: var(--accent-color) !important;
 }
+
+.min-height {
+  min-height: calc(100vh - 190px);
+}
