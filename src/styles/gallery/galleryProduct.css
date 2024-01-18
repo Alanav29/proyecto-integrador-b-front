@@ -30,7 +30,7 @@
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  transform: translateY(110px);
+  transform: translateY(130px);
 }
 
 .card:hover .gallery-product-card-body {
