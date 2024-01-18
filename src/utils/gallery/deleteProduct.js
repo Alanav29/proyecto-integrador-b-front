@@ -4,7 +4,7 @@ import { apiProductsUrl } from "../apiRoutes/apiRouterIndex";
 // Función para la petición DELETE
 async function deleteProduct(id) {
   try {
-    const response = await fetch(`${apiProductsUrl}${id}`, {
+    const response = await fetch(`${apiProductsUrl}/${id}`, {
       method: "DELETE",
     });
     const data = await response.json();
