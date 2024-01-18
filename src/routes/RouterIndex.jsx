@@ -23,25 +23,27 @@ const RouterIndex = () => {
     <>
       <NavBar />
       <PageLogoMobile />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/logIn" element={<LogIn />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/product/:productId" element={<Product />} />
-        {user.privilege.privilege === "admin" ? (
-          <>
-            <Route path="/editProduct/:productId" element={<EditProduct />} />
-            <Route path="/addProduct" element={<AddProduct />} />
-            <Route path="/galleryAdmin" element={<GalleryAdmin />} />
-          </>
-        ) : (
-          <></>
-        )}
-      </Routes>
+      <div className="min-height">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/logIn" element={<LogIn />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:productId" element={<Product />} />
+          {user.privilege.privilege === "admin" ? (
+            <>
+              <Route path="/editProduct/:productId" element={<EditProduct />} />
+              <Route path="/addProduct" element={<AddProduct />} />
+              <Route path="/galleryAdmin" element={<GalleryAdmin />} />
+            </>
+          ) : (
+            <></>
+          )}
+        </Routes>
+      </div>
       <NavbarMobile />
       <Footer />
     </>

@@ -3,20 +3,29 @@ import { apiProductsUrl } from "../apiRoutes/apiRouterIndex";
 
 // Función para la petición PUT
 async function updateProduct(id, updatedData) {
-  console.log(updatedData);
   let finalData = {};
-  if (updatedData.title !== "") finalData.title = updatedData.title;
+  finalData.id = id;
+  finalData.title = updatedData.title;
 
-  if (updatedData.width !== "") finalData.width = updatedData.width;
+  if (updatedData.width !== "") finalData.width = parseInt(updatedData.width);
+  else finalData.width = 0;
 
-  if (updatedData.height !== "") finalData.height = updatedData.height;
-  if (updatedData.color !== "") finalData.color = updatedData.color;
-  if (updatedData.price !== "") finalData.price = updatedData.price;
-  if (updatedData.technique !== "") finalData.technique = updatedData.technique;
-  if (updatedData.img !== "") finalData.img = updatedData.img;
+  if (updatedData.height !== "")
+    finalData.height = parseInt(updatedData.height);
+  else finalData.height = 0;
+  finalData.color = updatedData.color;
+  if (updatedData.price !== "") finalData.price = parseInt(updatedData.price);
+  else finalData.price = 0;
+
+  finalData.technique = updatedData.technique;
+  finalData.img = updatedData.img;
+
+  finalData.active = true;
+
+  console.log(finalData);
 
   try {
-    const response = await fetch(`${apiProductsUrl}${id}`, {
+    const response = await fetch(`${apiProductsUrl}/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
