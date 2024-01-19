@@ -4,16 +4,19 @@ import GalleryViewHome from "../../components/homeGallery/GalleryViewHome";
 import Banner from "../../components/homeGallery/Banner";
 import { useSelector } from "react-redux";
 import { selectProducts } from "../../features/productsFeature";
+import { useState } from "react";
 
 const Home = () => {
   const products = useSelector(selectProducts);
+
   const showCarousel = () => {
-    return products.length > 0 ? (
+    return products.length > 5 ? (
       <Carousel products={products}></Carousel>
     ) : (
       <></>
     );
   };
+
   return (
     <div>
       {showCarousel()}
