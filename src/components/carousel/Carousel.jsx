@@ -5,8 +5,13 @@ import "../../styles/carousel/carousel.css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Carousel = ({ products }) => {
+  const [reversedProducts, setReversedProducts] = useState(
+    products.slice().reverse()
+  );
+
   return (
     <section>
       <br />
@@ -46,28 +51,28 @@ const Carousel = ({ products }) => {
         className="swiper-container"
       >
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[0].id}`}>
-            <img src={products[0].img} alt="" />
+          <Link to={`/product/${reversedProducts[0].id}`}>
+            <img src={reversedProducts[0].img} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[1].id}`}>
-            <img src={products[1].img} alt="" />
+          <Link to={`/product/${reversedProducts[1].id}`}>
+            <img src={reversedProducts[1].img} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[2].id}`}>
-            <img src={products[2].img} alt="" />
+          <Link to={`/product/${reversedProducts[2].id}`}>
+            <img src={reversedProducts[2].img} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[3].id}`}>
-            <img src={products[3].img} alt="" />
+          <Link to={`/product/${reversedProducts[3].id}`}>
+            <img src={reversedProducts[3].img} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide className="slide-item">
-          <Link to={`/product/${products[4].id}`}>
-            <img src={products[4].img} alt="" />
+          <Link to={`/product/${reversedProducts[4].id}`}>
+            <img src={reversedProducts[4].img} alt="" />
           </Link>
         </SwiperSlide>
       </Swiper>
