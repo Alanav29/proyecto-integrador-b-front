@@ -11,14 +11,16 @@ import "cropperjs/dist/cropper.css";
 import { blobToURL, fromURL } from "image-resize-compress";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addChange } from "../../features/changesConter";
+import { selectUser } from "../../features/userFeature";
 
 const AddProductForm = () => {
   const { handleSubmit, register, reset } = useForm();
   const cropperRef = useRef();
   const [imgURL, setImgURL] = useState("");
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
 
   const notify = (message) => {
     toast.success(message, {
@@ -50,7 +52,7 @@ const AddProductForm = () => {
         };
         console.log(dataWithImg);
         notify("Estamos agregando tu producto");
-        const response = await addProduct(dataWithImg);
+        const response = await addProduct(dataWithImg, user.token);
         if (response.title) {
           notify("Producto agregado exitosamente");
           dispatch(addChange(1));

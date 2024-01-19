@@ -10,11 +10,12 @@ import "cropperjs/dist/cropper.css";
 import { blobToURL, fromURL } from "image-resize-compress";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addChange } from "../../features/changesConter";
 import { useParams } from "react-router";
 import getProduct from "../../utils/gallery/getProduct";
 import updateProduct from "../../utils/gallery/updateProduct";
+import { selectUser } from "../../features/userFeature";
 
 const EditProductForm = () => {
   const { handleSubmit, register, reset } = useForm();
@@ -23,6 +24,7 @@ const EditProductForm = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
 
   const getProductInfo = async () => {
     const data = await getProduct(productId);
@@ -82,7 +84,11 @@ const EditProductForm = () => {
         console.log(dataWithImg);
         notify("Estamos agregando tu producto");
 
-        const response = await updateProduct(productId, dataWithImg);
+        const response = await updateProduct(
+          productId,
+          dataWithImg,
+          user.token
+        );
         console.log(response);
         if (response.id) {
           notify("Producto actualizado exitosamente");

@@ -2,7 +2,7 @@
 import { apiProductsUrl } from "../apiRoutes/apiRouterIndex";
 
 // Función para la petición PUT
-async function updateProduct(id, updatedData) {
+async function updateProduct(id, updatedData, token) {
   let finalData = {};
   finalData.id = id;
   finalData.title = updatedData.title;
@@ -29,6 +29,7 @@ async function updateProduct(id, updatedData) {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(finalData),
     });
