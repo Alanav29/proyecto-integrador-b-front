@@ -2,24 +2,22 @@ import { apiLogInUrl } from "../apiRoutes/apiRouterIndex";
 
 async function logInFunction(userData) {
   let data = false;
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  let raw = JSON.stringify(userData);
+
+  let requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
   try {
-    const response = await fetch(apiLogInUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: userData.email,
-        password: userData.password,
-      }),
-    });
+    const response = await fetch(apiLogInUrl, requestOptions);
     data = await response.json();
     console.log(data);
-    // if (JSON.stringify(data).includes(userData.email) && JSON.stringify(data).includes(userData.password)) {
-    //     console.log("El usuario existe en la API");
-    // } else {
-    //     console.log("El usuario no existe en la API");
-    // }
   } catch (error) {
     console.error("Error: " + error);
   }
