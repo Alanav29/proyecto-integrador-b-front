@@ -29,12 +29,14 @@ const PaymentForm = () => {
         number={cardInfo.number}
         placeholders={{
           name: "TITULAR DE LA TARJETA",
-          number: "NUMERO DE TARJETA",
+          number: "NÚMERO DE TARJETA",
+          expiry: "VÁLIDO HASTA",
         }}
       />
       <form className="d-flex flex-column">
-        <label htmlFor="number"> Numero de tarjeta</label>
+        <label htmlFor="number-input"> Numero de tarjeta</label>
         <input
+          id="number-input"
           type="tel"
           name="number"
           placeholder="XXXX XXXX XXXX XXXX"
@@ -47,16 +49,18 @@ const PaymentForm = () => {
           }}
           onFocus={handleInputFocus}
         />
-        <label htmlFor="name">Titular de la tarjeta</label>
+        <label htmlFor="name-input">Titular de la tarjeta</label>
         <input
+          id="name-input"
           type="text"
           name="name"
           placeholder="Gabriela Ferro"
           onChange={handleInputChange}
           onFocus={handleInputFocus}
         />
-        <label htmlFor="">Fecha de expiración</label>
+        <label htmlFor="expiry-input">Fecha de expiración</label>
         <input
+          id="expiry-input"
           type="tel"
           name="expiry"
           placeholder="08/24"
@@ -69,8 +73,9 @@ const PaymentForm = () => {
           }}
           onFocus={handleInputFocus}
         />
-        <label htmlFor="">CVV</label>
+        <label htmlFor="cvc-input">CVV</label>
         <input
+          id="cvc-input"
           type="tel"
           name="cvc"
           placeholder="034"
