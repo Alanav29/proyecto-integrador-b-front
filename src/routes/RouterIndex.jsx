@@ -16,6 +16,7 @@ import Cart from "../pages/cart/Cart";
 import Product from "../pages/product/Product";
 import EditProduct from "../pages/editProduct/EditProduct";
 import Footer from "../components/footer/Footer";
+import Payment from "../pages/payment/Payment";
 
 const RouterIndex = () => {
   const user = useSelector(selectUser);
@@ -42,6 +43,7 @@ const RouterIndex = () => {
           ) : (
             <></>
           )}
+          {user.email ? <Route path="/payment" element={<Payment />} /> : <></>}
         </Routes>
       </div>
       <NavbarMobile />
