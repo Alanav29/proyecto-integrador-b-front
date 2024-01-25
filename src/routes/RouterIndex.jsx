@@ -16,9 +16,12 @@ import Cart from "../pages/cart/Cart";
 import Product from "../pages/product/Product";
 import EditProduct from "../pages/editProduct/EditProduct";
 import Footer from "../components/footer/Footer";
+import Payment from "../pages/payment/Payment";
+import { selectCart } from "../features/cartFeature";
 
 const RouterIndex = () => {
   const user = useSelector(selectUser);
+  const cart = useSelector(selectCart);
   return (
     <>
       <NavBar />
@@ -42,6 +45,7 @@ const RouterIndex = () => {
           ) : (
             <></>
           )}
+          {cart.length>=1 ? <Route path="/payment" element={<Payment />} /> : <></>}
         </Routes>
       </div>
       <NavbarMobile />

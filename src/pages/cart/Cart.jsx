@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import CartItem from "../../components/cart/CartItem";
 import "../../styles/cart/cart.css";
 import EmptyCart from "../../components/cart/EmptyCart";
+import ToPaymentButton from "../../components/general/buttons/ToPaymentButton";
 
 const Cart = () => {
   const cart = useSelector(selectCart);
@@ -56,9 +57,10 @@ const Cart = () => {
           <div className="total-container d-flex justify-content-center mx-0 mt-3 tracking-in-contract">
             Total: {formattedTotalPrice}MXN
           </div>
-          <button className="btn btn-dark my-4 fs-5 scale-up-center">
-            Proceder al pago
-          </button>
+          <ToPaymentButton
+            buttonTextp1={`Agregar datos de envío`}
+            buttonColorClass={" btn btn-dark text-white my-2 btn-block p-2"}
+          />
         </>
       ) : (
         <></>
