@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import PriceInput from "../general/inputs/PriceInput";
 import GeneralButton from "../general/buttons/GeneralButton";
 import PhoneInput from "../general/inputs/PhoneInput";
+import PaymentImage from "../../assets/img/general/paymentImage.gif";
 
 const AddressForm = ({ setAddressInfo }) => {
   const { handleSubmit, register, reset } = useForm();
@@ -13,8 +14,10 @@ const AddressForm = ({ setAddressInfo }) => {
   };
 
   return (
-    <div className="my-2 me-auto" id="address-form">
+    <div className=" m-4" id="address-form">
+            {/* <img className="img-fluid" src={PaymentImage} alt="" /> */}
       <h1>Datos de envío</h1>
+      
       <form onSubmit={handleSubmit(onSubmit)}>
         <TextInput
           placeholderText={"Calle, numero, colonia, delegación"}
