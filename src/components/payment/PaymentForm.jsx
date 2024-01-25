@@ -1,8 +1,13 @@
 import { useState } from "react";
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Cards from "@snowpak/react-credit-cards";
 import "../../styles/general/inputs/TextInput.css";
 import GeneralButton from "../general/buttons/GeneralButton";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCart } from "../../features/cartFeature";
 const PaymentForm = () => {
   const [cardInfo, setCardInfo] = useState({
     cvc: "",
@@ -12,6 +17,10 @@ const PaymentForm = () => {
     number: "",
   });
 
+  const {handleSubmit} = useForm();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleInputFocus = (e) => {
     setCardInfo({ ...cardInfo, focus: e.target.name });
   };
@@ -20,6 +29,19 @@ const PaymentForm = () => {
     const { name, value } = e.target;
     setCardInfo({ ...cardInfo, [name]: value });
   };
+
+  
+  const notify = () => {
+    toast.success(`Tú pedido se realizó exitosamente!`, {
+      position: "top-center",
+      autoClose: 3000,
+    });
+  };
+  const onSubmit = () =>{
+    notify();
+    navigate("/");
+    dispatch(setCart([]));
+  }
 
   return (
     <div className="m-2 slide-in-elliptic-top-fwd " id="payment-form">
@@ -35,7 +57,7 @@ const PaymentForm = () => {
           expiry: "VÁLIDO HASTA",
         }}
       />
-      <form className="d-flex flex-column m-3">
+      <form className="d-flex flex-column m-3" onSubmit={handleSubmit(onSubmit)}>
         <div className="text-input d-flex flex-column-reverse">
           <input
             className="p-2"
