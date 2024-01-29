@@ -1,3 +1,62 @@
+# Ferro E-commerce
+
+Ferro E-commerce es una plataforma diseñada para difundir, publicitar y vender el arte del reconocido pintor Alfonso Ferro. Este proyecto, desarrollado con el framework de JavaScript React, proporciona una experiencia de usuario fluida y responsiva, adaptándose a una variedad de dispositivos y tamaños de pantalla.
+
+## Instalación
+
+Para ejecutar el proyecto en tu entorno local, sigue estos pasos:
+
+1. Clona este repositorio en tu máquina local.
+2. Abre una terminal y navega hasta el directorio del proyecto.
+3. Ejecuta el comando `npm install` para instalar todas las dependencias.
+4. Una vez completada la instalación, ejecuta `npm start` para iniciar el servidor de desarrollo.
+5. Abre tu navegador web y visita `http://localhost:3000` para ver la aplicación en acción.
+6. Más abajo se encuentra información detallada del gestor de dependencias "npm".
+
+## Características principales
+
+### Página de inicio
+
+La página de inicio presenta un carrusel con las pinturas más destacadas o recientes de Alfonso Ferro. Utiliza la librería Swiper para la funcionalidad del carrusel. Además, incluye una imagen del pintor en acción y una cita inspiradora. También proporciona un vistazo rápido a la galería de arte.
+
+### Galería
+
+La página de la galería invita a los usuarios a sumergirse en el arte de Alfonso Ferro. Muestra una amplia colección de obras de arte disponibles para la venta. Cada obra tiene animaciones interactivas al pasar el cursor, incluyendo zoom y botones para ver detalles adicionales.
+
+### Página de "nosotros"
+
+Aquí encontrarás información sobre el equipo de desarrollo y una descripción detallada del pintor, Alfonso Ferro. Se incluyen perfiles individuales de los miembros del equipo, con sus roles, contactos y fotos.
+
+### Página de contacto
+
+Ofrece un formulario para que los usuarios puedan ponerse en contacto directamente con el artista. Utiliza la dependencia EmailJS para gestionar el envío de mensajes desde la página web, con validaciones de expresiones regulares y de la dependencia Validator.
+
+### Apartado de "Cuenta"
+
+Permite a los usuarios iniciar sesión o registrarse. Incluye formularios para iniciar sesión y registrar una nueva cuenta.
+
+### Carrito
+
+Muestra los productos agregados por el usuario para su compra. Utiliza React Redux para gestionar el estado de los productos en el carrito. Los usuarios pueden eliminar productos individualmente y proceder al pago.
+
+### Barra de navegación y Footer
+
+La barra de navegación y el footer se muestran en todas las páginas del sitio. Son responsivos y proporcionan acceso rápido a diferentes secciones del sitio y a las redes sociales del artista.
+
+## Backend y base de datos
+
+El backend del proyecto está desarrollado con el framework Spring en Java, y utiliza una base de datos PostgreSQL para almacenar la información.
+
+## Contribución
+
+Si deseas contribuir a este proyecto, no dudes en abrir un issue o enviar una pull request. ¡Tu ayuda es bienvenida!
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE.md para obtener más detalles.
+
+# <------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
